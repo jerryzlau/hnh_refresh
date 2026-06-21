@@ -286,6 +286,9 @@
           <strong>Thank you — your request has been received.</strong><br>
           Our team will contact you within one business day to confirm your appointment. If you need to reach us sooner, please call <a href="tel:+85228613777">(852) 2861 3777</a>.
         </div>
+        <div id="form-error" style="display:none;margin-top:16px;padding:14px 18px;background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;color:#b91c1c;font-size:.9rem">
+          Something went wrong sending your request — please try again, or call us directly at <a href="tel:+85228613777" style="color:#b91c1c;font-weight:600">(852) 2861 3777</a>.
+        </div>
       </div>
     </div>
   </section>
@@ -332,26 +335,55 @@
     dateInput.setAttribute('min',today);
   }
 
-  /* Form submit — show confirmation (no backend in this static build) */
   function submitForm(e){
     e.preventDefault();
     const form=document.getElementById('apptForm');
     const conf=document.getElementById('confirmation');
-    /* Basic required field check */
+    const errDiv=document.getElementById('form-error');
+    const btn=form.querySelector('.form-submit');
+
     const required=form.querySelectorAll('[required]');
     let valid=true;
     required.forEach(el=>{
-      if(!el.value.trim()){
-        el.style.borderColor='var(--cinnabar)';
-        valid=false;
-      } else {
-        el.style.borderColor='';
-      }
+      if(!el.value.trim()){ el.style.borderColor='var(--cinnabar)'; valid=false; }
+      else el.style.borderColor='';
     });
     if(!valid) return;
-    form.style.display='none';
-    conf.style.display='block';
-    conf.scrollIntoView({behavior:'smooth',block:'center'});
+
+    const data={
+      submittedAt:   new Date().toLocaleString('en-HK',{timeZone:'Asia/Hong_Kong'}),
+      firstName:     document.getElementById('firstName').value.trim(),
+      lastName:      document.getElementById('lastName').value.trim(),
+      phone:         document.getElementById('phone').value.trim(),
+      email:         document.getElementById('email').value.trim(),
+      service:       document.getElementById('service').value,
+      preferredDate: document.getElementById('preferredDate').value,
+      preferredTime: document.getElementById('preferredTime').value,
+      contactMethod: document.getElementById('contactMethod').value,
+      notes:         document.getElementById('notes').value.trim()
+    };
+
+    btn.textContent='Sending…';
+    btn.disabled=true;
+    errDiv.style.display='none';
+
+    fetch('/api/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    })
+    .then(r=>{ if(!r.ok) throw new Error(r.status); })
+    .then(()=>{
+      form.style.display='none';
+      conf.style.display='block';
+      conf.scrollIntoView({behavior:'smooth',block:'center'});
+    })
+    .catch(()=>{
+      btn.textContent='Submit Appointment Request';
+      btn.disabled=false;
+      errDiv.style.display='block';
+      errDiv.scrollIntoView({behavior:'smooth',block:'center'});
+    });
   }
 
   const io=new IntersectionObserver(entries=>{
