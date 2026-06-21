@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participation | HNH Clinical Trial Centre</title>
+<meta name="description" content="Join a clinical trial at HNH Clinical Trial Centre — information for patients about eligibility, what to expect, your rights, and currently recruiting studies in Hong Kong.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  :root{ --ctc-dark:#0D1F2D; --ctc-mid:#1A3547; }
+  .ctc-page-hero{background:linear-gradient(135deg,var(--ctc-dark),var(--ctc-mid));color:#fff;padding:64px 0 76px}
+  .ctc-page-hero .eyebrow{color:var(--orange)}
+  .ctc-page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.15;margin-top:14px}
+  .ctc-page-hero p.lead{margin-top:16px;font-size:1.06rem;color:rgba(255,255,255,.72);max-width:58ch}
+  .breadcrumb a{color:var(--orange)}
+  .breadcrumb .sep{opacity:.4}
+
+  /* Audience switcher tabs */
+  .tab-nav{display:flex;gap:0;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;width:fit-content;margin-bottom:48px}
+  .tab-btn{padding:12px 28px;font-size:.92rem;font-weight:600;background:none;border:none;cursor:pointer;color:var(--ink-soft);transition:background .2s,color .2s;font-family:'Albert Sans',sans-serif}
+  .tab-btn.active{background:var(--orange);color:#fff}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+
+  /* FAQ accordion */
+  .faq{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item:last-child{border-bottom:0}
+  .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;
+    font-family:'Albert Sans',sans-serif;font-size:.97rem;font-weight:600;color:var(--ink);
+    cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    transition:background .2s}
+  .faq-q:hover{background:var(--ivory)}
+  .faq-q .arrow{flex-shrink:0;color:var(--orange);transition:transform .3s;font-size:1.2rem}
+  .faq-q.open .arrow{transform:rotate(45deg)}
+  .faq-a{display:none;padding:0 24px 20px;font-size:.93rem;color:var(--ink-soft);line-height:1.7}
+  .faq-a.open{display:block}
+
+  /* Study eligibility cards */
+  .study-elig{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;margin-bottom:24px}
+  section.alt .study-elig{background:var(--ivory)}
+  .study-elig h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.12rem;color:var(--orange-deep);margin-bottom:6px}
+  .study-elig .meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem;margin-bottom:16px}
+  .study-elig .meta span{display:flex;align-items:center;gap:5px;color:var(--ink-soft);font-weight:600}
+  .recruit-dot{display:inline-flex;align-items:center;gap:5px;color:#1A7F3C;font-size:.78rem;font-weight:700}
+  .recruit-dot::before{content:'';width:6px;height:6px;border-radius:50%;background:#1A7F3C;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .elig-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:16px}
+  .elig-group h4{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:10px}
+  .elig-group ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .elig-group ul li{font-size:.88rem;color:var(--ink-soft);padding-left:18px;position:relative;line-height:1.5}
+  .elig-group ul li::before{position:absolute;left:0;font-size:.7rem}
+  .elig-group.incl ul li::before{content:'✓';color:#1A7F3C;top:1px}
+  .elig-group.excl ul li::before{content:'✕';color:var(--cinnabar);top:1px}
+
+  footer.ctc-footer{background:var(--ctc-dark);color:rgba(255,255,255,.55);font-size:.86rem}
+  footer.ctc-footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+
+  @media(max-width:980px){
+    .elig-cols{grid-template-columns:1fr}
+    .tab-nav{width:100%}
+    .tab-btn{flex:1;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon–Fri 9:00am–6:00pm</span>
+    <span>Enquiries: <a href="tel:+85221169283">+852 2116 9283</a></span>
+    <span class="lic"><a href="../index.html" style="color:#fff">← Humanity &amp; Health Medical Centre</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="name">
+        <strong style="font-size:.94rem">HNH Clinical Trial Centre</strong>
+        <span>天下仁心臨床研究中心</span>
+      </div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="links" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services &amp; Facilities</a>
+      <a href="participation.html" aria-current="page">Participation</a>
+      <a href="revolutionrx.html">RevolutionRx</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn" href="contact.html">Enquire Now</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <div class="ctc-page-hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,.5)">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Participation</span>
+      </div>
+      <div class="eyebrow">Participation · 參與</div>
+      <h1>Get involved in<br>clinical research</h1>
+      <p class="lead">Whether you are a patient exploring access to investigational therapies, or a sponsor seeking a high-performing Hong Kong site, this page explains how to work with us.</p>
+    </div>
+  </div>
+
+  <!-- AUDIENCE TABS -->
+  <section>
+    <div class="wrap">
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('patients',this)">For Patients</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('sponsors',this)">For Sponsors &amp; CROs</button>
+      </div>
+
+      <!-- PATIENTS TAB -->
+      <div class="tab-panel active" id="tab-patients">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+          <div class="reveal">
+            <div class="eyebrow">What is a Clinical Trial?</div>
+            <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.8vw,2.2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">A new treatment — before it's widely available</h2>
+            <p style="margin-top:18px;color:var(--ink-soft)">Clinical trials are carefully designed research studies that test whether new medical treatments — drugs, biologics, combinations, or devices — are safe and effective for patients. Before a treatment can be approved for general use, it must pass through rigorous clinical testing.</p>
+            <p style="margin-top:12px;color:var(--ink-soft)">By joining a clinical trial at HNH-CTC, you may gain access to promising new therapies that are not yet available through standard care. You will also contribute to research that helps future patients with the same condition.</p>
+            <p style="margin-top:12px;color:var(--ink-soft)">Participation is entirely voluntary. You may withdraw from a study at any time, without affecting your right to standard medical care.</p>
+          </div>
+          <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
+            <div class="svc" style="gap:10px">
+              <div style="font-size:1.4rem">💊</div>
+              <h3>Access to New Treatments</h3>
+              <p>Some patients in clinical trials access therapies months or years before regulatory approval — especially important for cancers with limited second- or third-line options.</p>
+            </div>
+            <div class="svc" style="gap:10px">
+              <div style="font-size:1.4rem">🩺</div>
+              <h3>Close Medical Monitoring</h3>
+              <p>Trial participants receive more frequent clinic visits, blood tests, and scans than in routine care — enabling early detection of any changes.</p>
+            </div>
+            <div class="svc" style="gap:10px">
+              <div style="font-size:1.4rem">💸</div>
+              <h3>Study Costs Covered</h3>
+              <p>All study-related procedures, tests, and investigational medication are provided at no cost to participants enrolled in sponsored trials.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- YOUR RIGHTS -->
+        <div style="margin-top:72px">
+          <div class="sec-head reveal">
+            <div class="eyebrow">Your Rights · 您的權利</div>
+            <h2>What you are protected by</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">📄</div>
+              <h3>Informed Consent</h3>
+              <p>You will receive a full written explanation of the study — its purpose, procedures, potential risks, and benefits — before you agree to participate. You may ask questions and take as much time as you need.</p>
+            </div>
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">🚪</div>
+              <h3>Right to Withdraw</h3>
+              <p>You may withdraw from the study at any time, for any reason, without penalty. Withdrawal will not affect the standard medical care you receive from your doctor.</p>
+            </div>
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">🔒</div>
+              <h3>Confidentiality</h3>
+              <p>Your personal identity is kept strictly confidential. Data shared with the sponsor is coded — only the research team at HNH-CTC can link your code to your identity.</p>
+            </div>
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">⚖️</div>
+              <h3>IRB Oversight</h3>
+              <p>Every study is independently reviewed and approved by an Institutional Review Board (IRB) before it begins, and the IRB monitors the trial throughout. Your welfare is their priority.</p>
+            </div>
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">💬</div>
+              <h3>Access to Information</h3>
+              <p>You have the right to receive information about the study results when they become available. You may also ask for information about your own health data collected during the trial.</p>
+            </div>
+            <div class="svc reveal" style="gap:10px">
+              <div style="font-size:1.4rem">🏥</div>
+              <h3>Ongoing Medical Care</h3>
+              <p>If you experience side effects or adverse events, you will receive prompt medical attention. You will not be asked to remain on a study treatment if your doctor believes it is no longer in your interest.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHAT TO EXPECT -->
+        <div style="margin-top:72px">
+          <div class="sec-head reveal">
+            <div class="eyebrow">What to Expect · 參與過程</div>
+            <h2>How participation works</h2>
+          </div>
+          <div style="max-width:680px" class="reveal">
+            <div style="display:flex;flex-direction:column;gap:0">
+              <div style="display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:stretch">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <div style="width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;flex-shrink:0">1</div>
+                  <div style="flex:1;width:2px;background:var(--orange-soft);margin:6px 0"></div>
+                </div>
+                <div style="padding-bottom:28px">
+                  <strong style="color:var(--ink)">Initial eligibility discussion</strong>
+                  <p style="font-size:.9rem;color:var(--ink-soft);margin-top:4px">Contact our team by phone or email. We'll ask about your diagnosis, treatment history, and current status to give you a preliminary idea of which studies you may qualify for.</p>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:stretch">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <div style="width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;flex-shrink:0">2</div>
+                  <div style="flex:1;width:2px;background:var(--orange-soft);margin:6px 0"></div>
+                </div>
+                <div style="padding-bottom:28px">
+                  <strong style="color:var(--ink)">Screening assessment</strong>
+                  <p style="font-size:.9rem;color:var(--ink-soft);margin-top:4px">A clinic visit with Dr Lau or the study team. Blood tests, imaging review, and a medical history review confirm whether you meet the study's inclusion and exclusion criteria. Screening is covered by the study sponsor.</p>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:stretch">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <div style="width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;flex-shrink:0">3</div>
+                  <div style="flex:1;width:2px;background:var(--orange-soft);margin:6px 0"></div>
+                </div>
+                <div style="padding-bottom:28px">
+                  <strong style="color:var(--ink)">Informed consent</strong>
+                  <p style="font-size:.9rem;color:var(--ink-soft);margin-top:4px">If eligible, the research team walks you through the informed consent form in detail. You have time to discuss with family and ask any questions before signing. This is never rushed.</p>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:stretch">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <div style="width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;flex-shrink:0">4</div>
+                  <div style="flex:1;width:2px;background:var(--orange-soft);margin:6px 0"></div>
+                </div>
+                <div style="padding-bottom:28px">
+                  <strong style="color:var(--ink)">Treatment &amp; study visits</strong>
+                  <p style="font-size:.9rem;color:var(--ink-soft);margin-top:4px">You receive the investigational treatment at our clinic on a schedule defined by the protocol. Our research nurses guide every visit and are available between visits if you have concerns.</p>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:48px 1fr;gap:20px">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <div style="width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;flex-shrink:0">5</div>
+                </div>
+                <div style="padding-bottom:28px">
+                  <strong style="color:var(--ink)">Follow-up &amp; close-out</strong>
+                  <p style="font-size:.9rem;color:var(--ink-soft);margin-top:4px">At the end of the treatment period, the team conducts a follow-up assessment. If the study ends, your care is transitioned back to your treating physician without interruption.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-top:72px">
+          <div class="sec-head reveal">
+            <div class="eyebrow">FAQ · 常見問題</div>
+            <h2>Patient frequently asked questions</h2>
+          </div>
+          <div class="faq reveal">
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">Am I guaranteed to receive the new treatment? <span class="arrow">+</span></button>
+              <div class="faq-a">In a randomised controlled trial, participants are allocated by chance to either the investigational treatment or a comparator (which may be standard of care, a placebo, or another active drug). Neither you nor the study team chooses which group you are in. In single-arm Phase II studies, all participants receive the investigational therapy. The consent form will clearly explain the design of the study you are considering.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">Will my regular doctor be informed? <span class="arrow">+</span></button>
+              <div class="faq-a">Yes, with your permission, we will keep your regular physician informed of your participation and provide copies of any relevant test results. Good communication between the trial team and your referring doctor ensures continuity of your overall care.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">What happens if I experience side effects? <span class="arrow">+</span></button>
+              <div class="faq-a">All side effects (called adverse events) are documented and managed by the trial team. You will be given an emergency contact number to reach the research nurses or on-call physician at any time. Serious adverse events are reported to the IRB and sponsor within strict timelines. You will receive appropriate medical treatment for any side effects, at no cost to you.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">Can I participate if I live outside Hong Kong? <span class="arrow">+</span></button>
+              <div class="faq-a">It depends on the study protocol and how frequent your visits need to be. Some studies allow patients from the Greater Bay Area to participate, particularly for less frequent visit schedules. Please discuss your situation with our team and we will advise you on feasibility for your specific circumstances.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">Is there any cost to me for participating? <span class="arrow">+</span></button>
+              <div class="faq-a">All study-related procedures, laboratory tests, imaging, and investigational medication are covered by the study sponsor at no charge to participants. You may still incur costs for travel to the clinic, or for medical care unrelated to the study. Some studies also provide a travel reimbursement — the consent form will specify this.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">What happens when the study ends? <span class="arrow">+</span></button>
+              <div class="faq-a">At study completion, the data is submitted to the sponsor and regulatory authorities. If the treatment was beneficial, you may be eligible for compassionate use or expanded access while the drug awaits approval. Your ongoing medical care is transferred back to your treating physician. You will be informed of the study's overall results when they are published.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPONSORS TAB -->
+      <div class="tab-panel" id="tab-sponsors">
+        <div class="reveal">
+          <div class="eyebrow">For Sponsors &amp; CROs · 贊助商及合約研究機構</div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.8vw,2.2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">Partner with a top-performing Asia site</h2>
+          <p style="margin-top:18px;color:var(--ink-soft);max-width:64ch">HNH-CTC has a demonstrated track record of high-speed, high-quality execution in competitive international trials. We are positioned to be a valuable site in your study — particularly for oncology indications in which Asia-Pacific patient access is critical.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px">
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">📈</div>
+            <h3>Proven Enrolment Performance</h3>
+            <p>Top-3 global recruitment ranking in two separate international Phase III trials. 41 patients enrolled in a single HCC study. 0% screen failure in select programmes.</p>
+          </div>
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">⚡</div>
+            <h3>Fast Site Activation</h3>
+            <p>Average startup under 3 months from contract signature to FPI. Experienced regulatory coordinator and established IRB relationship accelerate submission timelines.</p>
+          </div>
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">📊</div>
+            <h3>Data Quality</h3>
+            <p>Consistently low query rates. Audit-ready Trial Master File maintained throughout. GCP-trained staff with experience in Medidata Rave, Oracle InForm, and REDCap.</p>
+          </div>
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">🌏</div>
+            <h3>Asia-Pacific Access</h3>
+            <p>Established patient cohort in hepatology and oncology. HBV prevalence in Hong Kong creates a unique HCC population. Access to Greater Bay Area patients for select protocols.</p>
+          </div>
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">🏥</div>
+            <h3>Full On-Site Infrastructure</h3>
+            <p>ECG, echo, Holter, ultrasound, IV infusion, endoscopy, −80°C biobanking, and centrifuge on-site — minimising patient burden and logistical complexity.</p>
+          </div>
+          <div class="svc reveal" style="gap:12px">
+            <div style="font-size:1.5rem">🤝</div>
+            <h3>Investigator Expertise</h3>
+            <p>Dr George Lau is a globally recognised PI with over 300 publications. His reputation and referral network are a recruitment asset no CRO can replicate.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:56px;background:var(--orange-soft);border-radius:var(--radius);padding:36px 40px" class="reveal">
+          <div class="eyebrow">To partner with us</div>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--orange-deep);margin-top:10px;margin-bottom:14px">Request a feasibility assessment</h3>
+          <p style="color:var(--ink-soft);max-width:60ch">Send your protocol synopsis or full protocol to <a href="mailto:hnhctc@hnhmgl.com" style="color:var(--orange);font-weight:600">hnhctc@hnhmgl.com</a>. We will provide a written feasibility response within 5 business days including estimated screen failure rate, projected monthly enrolment, and a realistic site activation timeline.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
+            <a class="btn" href="contact.html">Submit a Feasibility Request</a>
+            <a class="btn ghost" href="services.html">View Our Capabilities</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CURRENT STUDIES -->
+  <section class="alt" id="current-studies">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Now Recruiting · 現正招募</div>
+        <h2>Currently open studies</h2>
+        <p>We are currently enrolling patients into the following studies. If you think you may be eligible, <a href="contact.html" style="color:var(--orange);font-weight:600">contact our team</a> for a confidential eligibility discussion — there is no obligation.</p>
+      </div>
+
+      <div class="study-elig reveal" id="nsclc">
+        <h3>KRAS G12C-Mutant Non-Small Cell Lung Cancer</h3>
+        <div class="meta">
+          <span>📋 Phase III</span>
+          <span style="color:var(--cinnabar)">🫁 Thoracic Oncology</span>
+          <span class="recruit-dot">Currently Recruiting</span>
+        </div>
+        <p style="font-size:.93rem;color:var(--ink-soft)">A randomised study evaluating a targeted oral KRAS G12C inhibitor in patients with advanced or metastatic NSCLC with a confirmed KRAS G12C mutation following platinum-based chemotherapy. KRAS G12C occurs in approximately 13% of NSCLC patients and has historically lacked approved targeted therapies.</p>
+        <div class="elig-cols">
+          <div class="elig-group incl">
+            <h4>Key Inclusion Criteria</h4>
+            <ul>
+              <li>Histologically confirmed advanced or metastatic NSCLC</li>
+              <li>KRAS G12C mutation confirmed by local testing</li>
+              <li>ECOG performance status 0 or 1</li>
+              <li>Received ≥1 prior line of platinum-based chemotherapy</li>
+              <li>Age ≥18 years</li>
+            </ul>
+          </div>
+          <div class="elig-group excl">
+            <h4>Key Exclusion Criteria</h4>
+            <ul>
+              <li>Prior KRAS G12C inhibitor therapy</li>
+              <li>Untreated or symptomatic CNS metastases</li>
+              <li>Active autoimmune disease requiring systemic treatment</li>
+              <li>Significant hepatic impairment (Child-Pugh B/C)</li>
+            </ul>
+          </div>
+        </div>
+        <a class="btn sm" href="contact.html" style="margin-top:20px;display:inline-block">Discuss eligibility →</a>
+      </div>
+
+      <div class="study-elig reveal" id="hcc">
+        <h3>Unresectable Metastatic Hepatocellular Carcinoma (First-line)</h3>
+        <div class="meta">
+          <span>📋 Phase III</span>
+          <span style="color:var(--cinnabar)">🫀 Hepatology / HCC</span>
+          <span class="recruit-dot">Currently Recruiting</span>
+        </div>
+        <p style="font-size:.93rem;color:var(--ink-soft)">An investigational systemic therapy regimen for patients with unresectable or metastatic HCC who have not received prior systemic treatment. Building on HNH-CTC's extensive experience with the HIMALAYA trial, this study targets first-line HCC — where improvements in overall survival remain urgently needed.</p>
+        <div class="elig-cols">
+          <div class="elig-group incl">
+            <h4>Key Inclusion Criteria</h4>
+            <ul>
+              <li>Histologically or radiologically confirmed unresectable or metastatic HCC</li>
+              <li>No prior systemic therapy for HCC</li>
+              <li>Child-Pugh A liver function</li>
+              <li>ECOG performance status 0 or 1</li>
+              <li>Adequate haematological, renal, and hepatic function</li>
+            </ul>
+          </div>
+          <div class="elig-group excl">
+            <h4>Key Exclusion Criteria</h4>
+            <ul>
+              <li>Prior systemic HCC therapy (including sorafenib)</li>
+              <li>Active HBV with HBV DNA &gt;500 IU/mL (unless on antiviral therapy)</li>
+              <li>Liver transplant history</li>
+              <li>Active autoimmune disease requiring immunosuppression</li>
+            </ul>
+          </div>
+        </div>
+        <a class="btn sm" href="contact.html" style="margin-top:20px;display:inline-block">Discuss eligibility →</a>
+      </div>
+
+      <div class="study-elig reveal" id="crc">
+        <h3>Treatment-Experienced Microsatellite Stable Colorectal Cancer (MSS CRC)</h3>
+        <div class="meta">
+          <span>📋 Phase II/III</span>
+          <span style="color:var(--cinnabar)">🔬 GI Oncology</span>
+          <span class="recruit-dot">Currently Recruiting</span>
+        </div>
+        <p style="font-size:.93rem;color:var(--ink-soft)">MSS colorectal cancer — which accounts for ~95% of all CRC — does not respond to immunotherapy alone, representing a major unmet need. This study investigates a novel combination strategy for patients who have progressed on standard first- and second-line chemotherapy.</p>
+        <div class="elig-cols">
+          <div class="elig-group incl">
+            <h4>Key Inclusion Criteria</h4>
+            <ul>
+              <li>Confirmed MSS (non-MSI-H) colorectal adenocarcinoma</li>
+              <li>Received ≥2 prior lines of chemotherapy (oxaliplatin and irinotecan-based)</li>
+              <li>ECOG performance status 0–1</li>
+              <li>Measurable disease per RECIST 1.1</li>
+            </ul>
+          </div>
+          <div class="elig-group excl">
+            <h4>Key Exclusion Criteria</h4>
+            <ul>
+              <li>MSI-H or dMMR tumour status</li>
+              <li>Prior treatment with any anti-PD-1 / anti-PD-L1 antibody</li>
+              <li>Untreated brain metastases</li>
+              <li>Significant GI bleeding within 6 months</li>
+            </ul>
+          </div>
+        </div>
+        <a class="btn sm" href="contact.html" style="margin-top:20px;display:inline-block">Discuss eligibility →</a>
+      </div>
+
+      <div class="study-elig reveal" id="breast">
+        <h3>ER+ / HER2− Locally Advanced or Metastatic Breast Cancer</h3>
+        <div class="meta">
+          <span>📋 Phase II/III</span>
+          <span style="color:var(--cinnabar)">🎗️ Breast Oncology</span>
+          <span class="recruit-dot">Currently Recruiting</span>
+        </div>
+        <p style="font-size:.93rem;color:var(--ink-soft)">Evaluating a next-generation endocrine agent — a complete estrogen receptor antagonist (CERAN) — in patients with ER+/HER2− metastatic breast cancer who have progressed on at least one prior endocrine therapy. This class of agent may overcome acquired resistance to CDK4/6 inhibitors and SERDs.</p>
+        <div class="elig-cols">
+          <div class="elig-group incl">
+            <h4>Key Inclusion Criteria</h4>
+            <ul>
+              <li>ER+/HER2− locally advanced or metastatic breast cancer (female or male)</li>
+              <li>Progressed on ≥1 prior endocrine therapy ± CDK4/6 inhibitor</li>
+              <li>Post-menopausal or receiving ovarian suppression</li>
+              <li>ECOG PS 0–1; measurable or bone-only disease</li>
+            </ul>
+          </div>
+          <div class="elig-group excl">
+            <h4>Key Exclusion Criteria</h4>
+            <ul>
+              <li>HER2-positive or triple-negative breast cancer</li>
+              <li>&gt;2 prior lines of chemotherapy for metastatic disease</li>
+              <li>Active or symptomatic visceral crisis requiring chemotherapy</li>
+              <li>Untreated CNS metastases</li>
+            </ul>
+          </div>
+        </div>
+        <a class="btn sm" href="contact.html" style="margin-top:20px;display:inline-block">Discuss eligibility →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section style="padding:80px 0;background:linear-gradient(135deg,#0D1F2D,#1A3547)">
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow" style="color:#E0731D">Get in touch</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;color:#fff;margin:14px 0 12px">Think you may be eligible?</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:50ch;margin:0 auto 28px">Contact us for a no-obligation, confidential discussion about current studies and whether any may be right for you.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="contact.html" style="background:var(--orange)">Contact the Centre</a>
+        <a class="btn ghost" href="tel:+85221169283" style="color:#fff;border-color:rgba(255,255,255,.45)">+852 2116 9283</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ctc-footer">
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:1rem;color:#fff">HNH Clinical Trial Centre</div>
+      <div style="margin-top:4px;color:rgba(255,255,255,.6)">1401, 14/F, 9 Queen's Road Central, Central, Hong Kong</div>
+      <div style="margin-top:8px;font-size:.78rem">©2026 HNH Clinical Trial Centre · <a href="../index.html" style="color:var(--orange)">Main Medical Centre ↗</a></div>
+    </div>
+    <a class="btn" href="contact.html" style="background:var(--orange)">Contact Us</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const nav=document.getElementById('navlinks');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#navlinks a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open'));
+  });
+  function switchTab(id,btn){
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+id).classList.add('active');
+  }
+  function toggleFaq(btn){
+    const a=btn.nextElementSibling;
+    const open=a.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  }
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

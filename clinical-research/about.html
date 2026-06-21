@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | HNH Clinical Trial Centre</title>
+<meta name="description" content="About HNH Clinical Trial Centre — our mission, our Principal Investigator Dr George Lau, our research team, and why we are a preferred site for global clinical trials.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  :root{ --ctc-dark:#0D1F2D; --ctc-mid:#1A3547; }
+  .ctc-page-hero{
+    background:linear-gradient(135deg,var(--ctc-dark) 0%,var(--ctc-mid) 100%);
+    color:#fff;padding:64px 0 76px;border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .ctc-page-hero .eyebrow{color:var(--orange)}
+  .ctc-page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.15;margin-top:14px}
+  .ctc-page-hero p.lead{margin-top:16px;font-size:1.06rem;color:rgba(255,255,255,.72);max-width:58ch}
+  .breadcrumb a{color:var(--orange)}
+  .breadcrumb .sep{opacity:.4}
+  .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .value-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .25s,box-shadow .25s}
+  .value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .value-card .ic{font-size:1.7rem;margin-bottom:12px}
+  .value-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--orange-deep);margin-bottom:8px}
+  .value-card p{font-size:.9rem;color:var(--ink-soft)}
+  .pi-card{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:start;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .pi-card img{width:100%;height:320px;object-fit:cover;object-position:top}
+  .pi-card .info{padding:36px 36px 36px 0}
+  .pi-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;color:var(--orange-deep)}
+  .pi-card .role{font-size:.85rem;font-weight:700;color:var(--cinnabar);letter-spacing:.05em;margin:6px 0 14px}
+  .pi-card .quals{font-size:.82rem;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
+  .pi-card p{font-size:.94rem;color:var(--ink-soft);margin-bottom:12px}
+  .pi-card .contact{margin-top:18px;font-size:.88rem}
+  .pi-card .contact a{color:var(--orange);font-weight:600;text-decoration:none}
+  .pi-card .contact a:hover{text-decoration:underline}
+  .ta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .ta-item{display:flex;gap:14px;align-items:flex-start;padding:20px;
+    background:#fff;border:1px solid var(--line);border-radius:12px}
+  .ta-item .ic{flex:0 0 40px;height:40px;border-radius:10px;background:var(--orange-soft);
+    color:var(--orange);display:grid;place-items:center;font-size:1.1rem}
+  .ta-item h4{font-family:'Fraunces',serif;font-weight:600;font-size:.98rem;color:var(--orange-deep)}
+  .ta-item p{font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  footer.ctc-footer{background:var(--ctc-dark);color:rgba(255,255,255,.55);font-size:.86rem}
+  footer.ctc-footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  @media(max-width:980px){
+    .pi-card{grid-template-columns:1fr}
+    .pi-card img{height:260px}
+    .pi-card .info{padding:28px}
+    .value-grid{grid-template-columns:1fr 1fr}
+    .ta-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){
+    .value-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon–Fri 9:00am–6:00pm</span>
+    <span>Enquiries: <a href="tel:+85221169283">+852 2116 9283</a></span>
+    <span class="lic"><a href="../index.html" style="color:#fff">← Humanity &amp; Health Medical Centre</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="name">
+        <strong style="font-size:.94rem">HNH Clinical Trial Centre</strong>
+        <span>天下仁心臨床研究中心</span>
+      </div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="links" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="services.html">Services &amp; Facilities</a>
+      <a href="participation.html">Participation</a>
+      <a href="revolutionrx.html">RevolutionRx</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn" href="participation.html">Join a Trial</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <div class="ctc-page-hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,.5)">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>About</span>
+      </div>
+      <div class="eyebrow">About Us · 關於我們</div>
+      <h1>Excellence in clinical research,<br>grounded in patient care</h1>
+      <p class="lead">HNH Clinical Trial Centre combines the investigator expertise of a world-class academic centre with the efficiency and patient access of a dedicated private clinical trial unit.</p>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+        <div class="reveal">
+          <div class="eyebrow">Our Mission · 使命</div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.8vw,2.2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">Bridging innovation and patients</h2>
+          <p style="margin-top:18px;color:var(--ink-soft)">Clinical trials are the engine of medical progress — but they only work when the right patients can access them, and when sites execute with the discipline that produces trustworthy data. HNH Clinical Trial Centre exists to do both.</p>
+          <p style="margin-top:12px;color:var(--ink-soft)">We are committed to professional service, strict patient confidentiality, and the highest standards of research integrity under ICH-GCP guidelines. Our patient-centred approach means that every participant is treated as an individual deserving of care — not just a data point.</p>
+          <p style="margin-top:12px;color:var(--ink-soft)">Located at the heart of Hong Kong's financial district, we draw patients from across Hong Kong Island and the broader Guangdong-Hong Kong-Macao Greater Bay Area, giving sponsors access to a diverse and medically underserved oncology population.</p>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Our Principles · 原則</div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.8vw,2.2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">How we work</h2>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:18px">
+            <li style="display:flex;gap:14px;align-items:flex-start">
+              <span style="flex:0 0 32px;height:32px;border-radius:8px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-weight:700;font-size:.9rem">1</span>
+              <div>
+                <strong style="color:var(--ink)">Patient first</strong>
+                <p style="font-size:.9rem;color:var(--ink-soft);margin-top:3px">Every decision — from eligibility screening to follow-up scheduling — prioritises participant safety and wellbeing above study metrics.</p>
+              </div>
+            </li>
+            <li style="display:flex;gap:14px;align-items:flex-start">
+              <span style="flex:0 0 32px;height:32px;border-radius:8px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-weight:700;font-size:.9rem">2</span>
+              <div>
+                <strong style="color:var(--ink)">Rigorous GCP compliance</strong>
+                <p style="font-size:.9rem;color:var(--ink-soft);margin-top:3px">All studies are conducted in strict accordance with ICH E6(R2) GCP guidelines and applicable Hong Kong regulatory requirements. Protocol deviations are rare; when they occur, they are reported immediately.</p>
+              </div>
+            </li>
+            <li style="display:flex;gap:14px;align-items:flex-start">
+              <span style="flex:0 0 32px;height:32px;border-radius:8px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-weight:700;font-size:.9rem">3</span>
+              <div>
+                <strong style="color:var(--ink)">Data quality &amp; integrity</strong>
+                <p style="font-size:.9rem;color:var(--ink-soft);margin-top:3px">Clean, complete, and audit-ready data at every data cut. Our query rate is consistently below industry average, reducing sponsor burden and accelerating timelines.</p>
+              </div>
+            </li>
+            <li style="display:flex;gap:14px;align-items:flex-start">
+              <span style="flex:0 0 32px;height:32px;border-radius:8px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-weight:700;font-size:.9rem">4</span>
+              <div>
+                <strong style="color:var(--ink)">Transparent communication</strong>
+                <p style="font-size:.9rem;color:var(--ink-soft);margin-top:3px">Sponsors and monitors receive proactive, timely updates. We view our sponsor relationships as partnerships, not transactions.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAL INVESTIGATOR -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Principal Investigator · 主要研究員</div>
+        <h2>Dr George Lau</h2>
+      </div>
+      <div class="pi-card reveal">
+        <img src="../assets/doc-george-lau.jpg"
+             data-cdn="https://static.wixstatic.com/media/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg"
+             onerror="if(this.dataset.cdn){this.src=this.dataset.cdn;this.removeAttribute('data-cdn')}"
+             alt="Dr George Lau">
+        <div class="info">
+          <h3>Dr George Lau</h3>
+          <div class="role">Principal Investigator · Gastroenterology &amp; Hepatology</div>
+          <div class="quals">MB BS (HK) · MRCP (UK) · FHKCP · MD (HK) · FRCP (Edin) · FRCP (Lond) · FHKAM (Medicine)</div>
+          <p>Dr George Lau is one of Asia's foremost hepatologists and one of the world's most cited researchers in viral hepatitis and liver disease. He holds a Doctor of Medicine from The University of Hong Kong and triple fellowship from the Royal Colleges of Physicians of Edinburgh and London, as well as the Hong Kong Academy of Medicine.</p>
+          <p>As Principal Investigator at HNH-CTC, Dr Lau has led or co-led numerous pivotal international clinical trials. He served as a core investigator in the landmark HIMALAYA Phase III study of tremelimumab plus durvalumab (STRIDE regimen) in unresectable HCC, and presented findings on the Asian patient subgroup at the 2025 APASL Single Topic Conference in Qingdao, China. HNH-CTC ranked among the top 3 global recruitment sites for this study.</p>
+          <p>Beyond HCC, Dr Lau has extensive trial experience in HBV, HCV, NASH, and oncology spanning NSCLC, colorectal cancer, and breast cancer. He has published more than 300 peer-reviewed articles in journals including <em>Journal of Hepatology</em>, <em>Hepatology</em>, <em>Gut</em>, and <em>The Lancet</em>.</p>
+          <div class="contact">
+            <div><strong>Email:</strong> <a href="mailto:gkklau@hnhmgl.com">gkklau@hnhmgl.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+85228613777">(852) 2861 3777</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THERAPEUTIC AREAS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Therapeutic Areas · 治療領域</div>
+        <h2>Where we operate</h2>
+        <p>Our established patient populations and subspecialty expertise allow us to recruit efficiently across several high-priority oncology and hepatology indications.</p>
+      </div>
+      <div class="ta-grid reveal">
+        <div class="ta-item">
+          <div class="ic">🫁</div>
+          <div>
+            <h4>Non-Small Cell Lung Cancer (NSCLC)</h4>
+            <p>Targeted therapies including KRAS G12C, ALK, EGFR inhibitors; immune checkpoint blockade; and combination strategies. Top 3 global recruitment in prior ALK study.</p>
+          </div>
+        </div>
+        <div class="ta-item">
+          <div class="ic">🫀</div>
+          <div>
+            <h4>Hepatocellular Carcinoma (HCC)</h4>
+            <p>Systemic therapies, immunotherapy, and combination regimens for unresectable or metastatic HCC. Core HIMALAYA investigator site; 41 patients enrolled in one HCC programme.</p>
+          </div>
+        </div>
+        <div class="ta-item">
+          <div class="ic">🔬</div>
+          <div>
+            <h4>Colorectal Cancer (CRC)</h4>
+            <p>Treatment-experienced MSS and MSI-H colorectal cancer; novel immunotherapy combinations and targeted agents. Colonoscopy capability on-site.</p>
+          </div>
+        </div>
+        <div class="ta-item">
+          <div class="ic">🎗️</div>
+          <div>
+            <h4>Breast Cancer</h4>
+            <p>ER+/HER2− locally advanced and metastatic breast cancer; CDK4/6 inhibitor combinations; next-generation endocrine strategies including complete ER antagonists.</p>
+          </div>
+        </div>
+        <div class="ta-item">
+          <div class="ic">🦠</div>
+          <div>
+            <h4>Viral Hepatitis &amp; Liver Disease</h4>
+            <p>HBV, HCV, NASH/MAFLD clinical trials — decades of investigator experience and an established hepatitis patient cohort in Hong Kong.</p>
+          </div>
+        </div>
+        <div class="ta-item">
+          <div class="ic">⚕️</div>
+          <div>
+            <h4>GI Oncology &amp; Other Solid Tumours</h4>
+            <p>Gastric, biliary tract, and pancreatic cancers; GIST; and other solid tumour indications. Full GI endoscopy capability available on-site.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Why Choose Us · 為何選擇我們</div>
+        <h2>What sets us apart</h2>
+      </div>
+      <div class="value-grid">
+        <div class="value-card reveal">
+          <div class="ic">🏆</div>
+          <h3>Top-Ranked Global Recruitment</h3>
+          <p>Ranked top 3 globally in multiple international Phase II–III trials. Our patient access, precise screening, and minimal screen failures make us a consistently high-performing site.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="ic">⚡</div>
+          <h3>Rapid Site Activation</h3>
+          <p>Average time from contract signature to first patient enrolled is under 3 months — well below the industry average — driven by experienced regulatory coordinators and an established IRB relationship.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="ic">🤝</div>
+          <h3>High Retention</h3>
+          <p>Average patient retention above 90% across all studies. Our dedicated research nurses and responsive follow-up processes minimise early withdrawal and protocol deviations.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="ic">📊</div>
+          <h3>Clean Data</h3>
+          <p>Consistently low query rates and audit-ready TMFs. Our experienced research coordinators complete CRFs accurately and on time, minimising sponsor monitoring burden.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="ic">🏥</div>
+          <h3>One-Stop Facilities</h3>
+          <p>ECG, ultrasound, echocardiography, Holter monitoring, endoscopy, IV infusion, and bio-sample processing all on-site — removing logistical barriers for participants.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="ic">🌏</div>
+          <h3>Access to Asia-Pacific Patients</h3>
+          <p>Central Hong Kong location with reach into the Greater Bay Area. Ethnically diverse patient population relevant to pan-Asian and global oncology studies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:80px 0;background:linear-gradient(135deg,#0D1F2D,#1A3547)">
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow" style="color:#E0731D">Contact Us</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;color:#fff;margin:14px 0 12px">Interested in partnering with HNH-CTC?</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:50ch;margin:0 auto 28px">Whether you represent a sponsor, CRO, or are a patient interested in trial participation, we welcome your enquiry.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="contact.html" style="background:var(--orange)">Get in Touch</a>
+        <a class="btn ghost" href="services.html" style="color:#fff;border-color:rgba(255,255,255,.45)">Services &amp; Facilities</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ctc-footer">
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:1rem;color:#fff">HNH Clinical Trial Centre</div>
+      <div style="margin-top:4px;color:rgba(255,255,255,.6)">1401, 14/F, 9 Queen's Road Central, Central, Hong Kong</div>
+      <div style="margin-top:8px;font-size:.78rem">©2026 HNH Clinical Trial Centre · <a href="../index.html" style="color:var(--orange)">Main Medical Centre ↗</a></div>
+    </div>
+    <a class="btn" href="participation.html" style="background:var(--orange)">Join a Trial</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const nav=document.getElementById('navlinks');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#navlinks a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open'));
+  });
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

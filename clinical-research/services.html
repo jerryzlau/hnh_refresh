@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Facilities | HNH Clinical Trial Centre</title>
+<meta name="description" content="HNH Clinical Trial Centre — Phase II–IV clinical trial services, one-stop facility capabilities, specimen processing, diagnostics, and regulatory support in Hong Kong.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  :root{ --ctc-dark:#0D1F2D; --ctc-mid:#1A3547; }
+  .ctc-page-hero{background:linear-gradient(135deg,var(--ctc-dark),var(--ctc-mid));color:#fff;padding:64px 0 76px}
+  .ctc-page-hero .eyebrow{color:var(--orange)}
+  .ctc-page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.15;margin-top:14px}
+  .ctc-page-hero p.lead{margin-top:16px;font-size:1.06rem;color:rgba(255,255,255,.72);max-width:58ch}
+  .breadcrumb a{color:var(--orange)}
+  .breadcrumb .sep{opacity:.4}
+
+  /* Service phases */
+  .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .phase-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:32px 28px;display:flex;flex-direction:column;gap:14px;
+    transition:transform .25s,box-shadow .25s;
+  }
+  section.alt .phase-card{background:var(--ivory)}
+  .phase-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .phase-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:500;color:var(--orange);line-height:1}
+  .phase-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--orange-deep)}
+  .phase-card p{font-size:.9rem;color:var(--ink-soft)}
+  .phase-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .phase-card ul li{font-size:.86rem;color:var(--ink-soft);padding-left:16px;position:relative}
+  .phase-card ul li::before{content:'–';position:absolute;left:0;color:var(--orange)}
+
+  /* Facility equipment */
+  .equip-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .equip-group h3{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--orange-deep);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--orange-soft)}
+  .equip-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .equip-list li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;color:var(--ink-soft)}
+  .equip-list .dot{flex:0 0 8px;height:8px;border-radius:50%;background:var(--orange);margin-top:7px}
+
+  /* Process timeline */
+  .timeline{display:flex;flex-direction:column;gap:0}
+  .tl-step{display:grid;grid-template-columns:56px 1fr;gap:24px;align-items:stretch}
+  .tl-line{display:flex;flex-direction:column;align-items:center}
+  .tl-num{width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;
+    font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;
+    display:grid;place-items:center;flex-shrink:0}
+  .tl-connector{flex:1;width:2px;background:var(--orange-soft);margin:6px 0}
+  .tl-step:last-child .tl-connector{display:none}
+  .tl-content{padding:0 0 32px 0}
+  .tl-content h4{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--orange-deep);margin-bottom:6px}
+  .tl-content p{font-size:.92rem;color:var(--ink-soft)}
+  .tl-content .timing{display:inline-block;font-size:.78rem;font-weight:700;color:var(--cinnabar);letter-spacing:.06em;margin-top:8px;text-transform:uppercase}
+
+  footer.ctc-footer{background:var(--ctc-dark);color:rgba(255,255,255,.55);font-size:.86rem}
+  footer.ctc-footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+
+  @media(max-width:980px){
+    .phase-grid{grid-template-columns:1fr 1fr}
+    .equip-cols{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){
+    .phase-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon–Fri 9:00am–6:00pm</span>
+    <span>Enquiries: <a href="tel:+85221169283">+852 2116 9283</a></span>
+    <span class="lic"><a href="../index.html" style="color:#fff">← Humanity &amp; Health Medical Centre</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="name">
+        <strong style="font-size:.94rem">HNH Clinical Trial Centre</strong>
+        <span>天下仁心臨床研究中心</span>
+      </div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="links" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" aria-current="page">Services &amp; Facilities</a>
+      <a href="participation.html">Participation</a>
+      <a href="revolutionrx.html">RevolutionRx</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn" href="participation.html">Join a Trial</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <div class="ctc-page-hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,.5)">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Services &amp; Facilities</span>
+      </div>
+      <div class="eyebrow">Services &amp; Facilities · 服務與設施</div>
+      <h1>A complete one-stop<br>clinical trial operation</h1>
+      <p class="lead">Everything required to run a rigorous Phase II–IV clinical trial — investigator, experienced staff, advanced equipment, specimen handling, and regulatory support — under one roof in Central Hong Kong.</p>
+    </div>
+  </div>
+
+  <!-- TRIAL PHASES -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Trial Phases · 試驗階段</div>
+        <h2>Phases II, III &amp; IV capabilities</h2>
+        <p>We have the experience and infrastructure to serve as a principal site across the full spectrum of late-phase clinical development.</p>
+      </div>
+      <div class="phase-grid">
+
+        <div class="phase-card reveal">
+          <div class="phase-num">II</div>
+          <h3>Phase II — Proof of Concept</h3>
+          <p>Dose-finding, safety/tolerability, and early efficacy signal studies, often in defined biomarker-selected populations. We support both single-arm and randomised Phase II designs.</p>
+          <ul>
+            <li>Biomarker-driven patient selection (KRAS, EGFR, ALK, HER2, MSS/MSI)</li>
+            <li>Safety monitoring and AE reporting</li>
+            <li>PK/PD sampling with refrigerated centrifuge and −80°C storage</li>
+            <li>Frequent visit schedules accommodated</li>
+          </ul>
+        </div>
+
+        <div class="phase-card reveal">
+          <div class="phase-num">III</div>
+          <h3>Phase III — Pivotal Registration</h3>
+          <p>Large randomised controlled trials supporting global regulatory submissions. Our top-ranked global recruitment history demonstrates the capacity to enrol at pace while maintaining data quality.</p>
+          <ul>
+            <li>Rapid IRB approval and site activation (&lt;3 months average)</li>
+            <li>Blinded and open-label designs</li>
+            <li>IRT/RTSM randomisation system experience</li>
+            <li>High retention (&gt;90%) minimises informative censoring</li>
+            <li>Electronic data capture (EDC) proficiency</li>
+          </ul>
+        </div>
+
+        <div class="phase-card reveal">
+          <div class="phase-num">IV</div>
+          <h3>Phase IV — Post-Marketing</h3>
+          <p>Real-world evidence studies, expanded access programmes, and long-term safety follow-up registries in the post-approval phase.</p>
+          <ul>
+            <li>Real-world outcomes data collection</li>
+            <li>Long-term patient follow-up infrastructure</li>
+            <li>Expanded access and compassionate use facilitation</li>
+            <li>Patient-reported outcome (PRO) administration</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Facilities · 設施</div>
+        <h2>On-site equipment &amp; infrastructure</h2>
+        <p>Participants rarely need to travel to an external facility. Our Central Hong Kong location houses the full complement of diagnostic, specimen-handling, and treatment infrastructure required for complex oncology protocols.</p>
+      </div>
+      <div class="equip-cols reveal">
+        <div>
+          <div class="equip-group" style="margin-bottom:36px">
+            <h3>Drug &amp; Specimen Storage</h3>
+            <ul class="equip-list">
+              <li><div class="dot"></div><span><strong>Locked investigational product storage</strong> — secure, temperature-monitored IP cabinets with access log</span></li>
+              <li><div class="dot"></div><span><strong>2–8°C pharmaceutical refrigerators</strong> — for refrigerated IMP and biological kits</span></li>
+              <li><div class="dot"></div><span><strong>−20°C freezers</strong> — intermediate biological specimen storage</span></li>
+              <li><div class="dot"></div><span><strong>−80°C ultra-low freezers</strong> — long-term biobank-grade specimen storage for PK, PD, and correlative biomarker samples</span></li>
+            </ul>
+          </div>
+          <div class="equip-group" style="margin-bottom:36px">
+            <h3>Sample Processing</h3>
+            <ul class="equip-list">
+              <li><div class="dot"></div><span><strong>Refrigerated centrifuge</strong> — plasma, serum, and PBMC separation per protocol-specific processing manuals</span></li>
+              <li><div class="dot"></div><span><strong>Class II Biological Safety Cabinet</strong> — safe drug preparation and reconstitution for IV and intravesical agents</span></li>
+              <li><div class="dot"></div><span>Temperature monitoring with data logger and alarm system</span></li>
+              <li><div class="dot"></div><span>On-site IATA-certified specimen shipper with dry ice handling capability</span></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="equip-group" style="margin-bottom:36px">
+            <h3>Diagnostics &amp; Monitoring</h3>
+            <ul class="equip-list">
+              <li><div class="dot"></div><span><strong>ECG (12-lead)</strong> — standard and continuous monitoring</span></li>
+              <li><div class="dot"></div><span><strong>Holter monitoring</strong> — 24/48-hour ambulatory cardiac recording</span></li>
+              <li><div class="dot"></div><span><strong>Ultrasound</strong> — abdominal, hepatic, and soft tissue imaging</span></li>
+              <li><div class="dot"></div><span><strong>Echocardiography</strong> — cardiac function assessment (LVEF, wall motion)</span></li>
+              <li><div class="dot"></div><span><strong>Endoscopy (gastroscopy &amp; colonoscopy)</strong> — Olympus HDTV/NBI system</span></li>
+              <li><div class="dot"></div><span><strong>IV infusion systems</strong> — for IV chemotherapy, immunotherapy, and investigational agents</span></li>
+            </ul>
+          </div>
+          <div class="equip-group">
+            <h3>Imaging (via referral network)</h3>
+            <ul class="equip-list">
+              <li><div class="dot"></div><span><strong>X-ray</strong> — chest and skeletal</span></li>
+              <li><div class="dot"></div><span><strong>CT scan</strong> — thorax, abdomen, pelvis; RECIST-compliant tumour assessment</span></li>
+              <li><div class="dot"></div><span><strong>MRI</strong> — hepatic, brain, and whole-body protocols</span></li>
+              <li><div class="dot"></div><span><strong>PET-CT</strong> — for metabolic response assessment where required by protocol</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGULATORY & SUPPORT SERVICES -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Support Services · 支援服務</div>
+        <h2>End-to-end trial management</h2>
+        <p>Our experienced team provides comprehensive research coordination beyond just patient care — from IRB submission to study close-out.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">📋</div>
+          <h3>Regulatory Affairs</h3>
+          <p>IRB/IEC submission, annual renewals, substantial amendments, and SAE/SUSAR reporting. Experienced with ICHE6(R2) GCP and Hong Kong Department of Health requirements.</p>
+        </div>
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">💻</div>
+          <h3>Data Management</h3>
+          <p>Proficient in major EDC platforms (Medidata Rave, Oracle InForm, REDCap). Consistent low query rates and timely data entry to accelerate sponsor data cuts.</p>
+        </div>
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">🩺</div>
+          <h3>Research Nursing</h3>
+          <p>Dedicated research nurses manage study visits end-to-end: scheduling, consent, sample collection, AE monitoring, and participant communication.</p>
+        </div>
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">🔍</div>
+          <h3>Patient Recruitment</h3>
+          <p>Proactive pre-screening from the Centre's established patient cohort. Collaboration with referring physicians across Hong Kong and the Greater Bay Area for broader reach.</p>
+        </div>
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">📦</div>
+          <h3>IP Accountability</h3>
+          <p>Strict investigational product receipt, storage, dispensing, and accountability records. IP destruction or return handled per protocol and local regulations.</p>
+        </div>
+        <div class="svc reveal" style="gap:12px">
+          <div style="font-size:1.5rem">📁</div>
+          <h3>Trial Master File</h3>
+          <p>Audit-ready paper and/or electronic TMF maintained throughout the study lifecycle, available for monitoring visits and regulatory inspection at all times.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STARTUP PROCESS -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Site Activation · 啟動流程</div>
+        <h2>From contract to first patient in &lt;3 months</h2>
+        <p>Our streamlined site activation process has delivered first-patient-in timelines under 3 months — among the fastest in the Hong Kong clinical trial landscape.</p>
+      </div>
+      <div style="max-width:680px" class="reveal">
+        <div class="timeline">
+          <div class="tl-step">
+            <div class="tl-line"><div class="tl-num">1</div><div class="tl-connector"></div></div>
+            <div class="tl-content">
+              <h4>Feasibility Assessment</h4>
+              <p>Rapid protocol review and patient population assessment. We provide honest, data-driven feasibility input — including expected screen failure rates and monthly enrolment projections — within 5 business days.</p>
+              <span class="timing">~ 1 week</span>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-line"><div class="tl-num">2</div><div class="tl-connector"></div></div>
+            <div class="tl-content">
+              <h4>Contract &amp; Budget Negotiation</h4>
+              <p>Transparent, fair-market-value budget discussions. Clinical trial agreement (CTA) review with our legal team. Parallel processing with IRB submission where allowable.</p>
+              <span class="timing">2–4 weeks</span>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-line"><div class="tl-num">3</div><div class="tl-connector"></div></div>
+            <div class="tl-content">
+              <h4>IRB / IEC Submission &amp; Approval</h4>
+              <p>Full submission prepared by our regulatory coordinator, reviewed by PI, and submitted to the Institutional Review Board. We maintain an established relationship with our IRB to facilitate efficient review.</p>
+              <span class="timing">4–6 weeks</span>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-line"><div class="tl-num">4</div><div class="tl-connector"></div></div>
+            <div class="tl-content">
+              <h4>Site Initiation Visit &amp; Training</h4>
+              <p>Protocol-specific training for all staff. IP receipt and accountability procedures established. All regulatory documents finalised and filed in the TMF.</p>
+              <span class="timing">1–2 weeks</span>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-line"><div class="tl-num">5</div><div class="tl-connector"></div></div>
+            <div class="tl-content">
+              <h4>First Patient Enrolled</h4>
+              <p>Pre-screened patients contacted immediately upon site activation. Eligibility confirmed, informed consent obtained, and first patient randomised.</p>
+              <span class="timing">Target: week 10–12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:80px 0;background:linear-gradient(135deg,#0D1F2D,#1A3547)">
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow" style="color:#E0731D">Ready to begin?</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;color:#fff;margin:14px 0 12px">Request a feasibility assessment</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:52ch;margin:0 auto 28px">Send us your protocol or synopsis and we'll provide a rapid feasibility response with enrolment projections and timeline estimates.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="contact.html" style="background:var(--orange)">Contact the Centre</a>
+        <a class="btn ghost" href="mailto:hnhctc@hnhmgl.com" style="color:#fff;border-color:rgba(255,255,255,.45)">hnhctc@hnhmgl.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ctc-footer">
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:1rem;color:#fff">HNH Clinical Trial Centre</div>
+      <div style="margin-top:4px;color:rgba(255,255,255,.6)">1401, 14/F, 9 Queen's Road Central, Central, Hong Kong</div>
+      <div style="margin-top:8px;font-size:.78rem">©2026 HNH Clinical Trial Centre · <a href="../index.html" style="color:var(--orange)">Main Medical Centre ↗</a></div>
+    </div>
+    <a class="btn" href="participation.html" style="background:var(--orange)">Join a Trial</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const nav=document.getElementById('navlinks');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#navlinks a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open'));
+  });
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

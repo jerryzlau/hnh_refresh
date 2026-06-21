@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | HNH Clinical Trial Centre</title>
+<meta name="description" content="Contact HNH Clinical Trial Centre — phone, email, or online form for patient trial enquiries, sponsor feasibility requests, and general information.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  :root{ --ctc-dark:#0D1F2D; --ctc-mid:#1A3547; }
+  .ctc-page-hero{background:linear-gradient(135deg,var(--ctc-dark),var(--ctc-mid));color:#fff;padding:64px 0 76px}
+  .ctc-page-hero .eyebrow{color:var(--orange)}
+  .ctc-page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.15;margin-top:14px}
+  .ctc-page-hero p.lead{margin-top:16px;font-size:1.06rem;color:rgba(255,255,255,.72);max-width:58ch}
+  .breadcrumb a{color:var(--orange)}
+  .breadcrumb .sep{opacity:.4}
+
+  .map-link{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);transition:box-shadow .25s}
+  .map-link:hover{box-shadow:var(--shadow)}
+  .map-placeholder{height:200px;background:linear-gradient(135deg,#0D1F2D,#1A3547);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#fff;font-size:.95rem}
+  .map-placeholder .pin{font-size:2.2rem}
+  .map-address{padding:16px 20px;font-size:.88rem;color:var(--ink-soft)}
+  .map-address strong{color:var(--ink);display:block;margin-bottom:4px}
+
+  .confirmation{display:none;background:var(--orange-soft);border:1px solid var(--orange);border-radius:var(--radius);padding:20px 24px;margin-top:20px;font-size:.95rem}
+  .confirmation strong{color:var(--orange-deep)}
+
+  footer.ctc-footer{background:var(--ctc-dark);color:rgba(255,255,255,.55);font-size:.86rem}
+  footer.ctc-footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon–Fri 9:00am–6:00pm</span>
+    <span>Enquiries: <a href="tel:+85221169283">+852 2116 9283</a></span>
+    <span class="lic"><a href="../index.html" style="color:#fff">← Humanity &amp; Health Medical Centre</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="name">
+        <strong style="font-size:.94rem">HNH Clinical Trial Centre</strong>
+        <span>天下仁心臨床研究中心</span>
+      </div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="links" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services &amp; Facilities</a>
+      <a href="participation.html">Participation</a>
+      <a href="revolutionrx.html">RevolutionRx</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn" href="#enquiry-form">Send Enquiry</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <div class="ctc-page-hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,.5)">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Contact</span>
+      </div>
+      <div class="eyebrow">Contact · 聯絡我們</div>
+      <h1>Get in touch with<br>HNH Clinical Trial Centre</h1>
+      <p class="lead">Whether you're a patient exploring trial eligibility, a physician with a referral, or a sponsor requesting a feasibility assessment — we respond within one business day.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT DETAILS -->
+  <section>
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div>
+          <div class="sec-head reveal" style="margin-bottom:28px">
+            <div class="eyebrow">Contact Details · 聯絡方式</div>
+            <h2>Reach us directly</h2>
+          </div>
+          <ul class="contact-list reveal">
+            <li>
+              <span class="ic">☎</span>
+              <span>
+                <strong>Phone</strong><br>
+                <a href="tel:+85221169283">+852 2116 9283</a>
+              </span>
+            </li>
+            <li>
+              <span class="ic">✉</span>
+              <span>
+                <strong>Email</strong><br>
+                <a href="mailto:hnhctc@hnhmgl.com">hnhctc@hnhmgl.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="ic">⌖</span>
+              <span>
+                <strong>Address</strong><br>
+                Room 1401, 14/F, 9 Queen's Road Central<br>
+                Central, Hong Kong Island
+              </span>
+            </li>
+            <li>
+              <span class="ic">🕐</span>
+              <span>
+                <strong>Hours</strong><br>
+                Monday – Friday: 9:00 am – 6:00 pm<br>
+                <span style="color:var(--cinnabar);font-weight:600">Closed weekends &amp; public holidays</span>
+              </span>
+            </li>
+          </ul>
+
+          <a class="map-link reveal" href="https://maps.google.com/?q=9+Queen%27s+Road+Central,+Central,+Hong+Kong" target="_blank" rel="noopener" style="margin-top:26px">
+            <div class="map-placeholder">
+              <div class="pin">📍</div>
+              <span>9 Queen's Road Central, Central</span>
+              <span style="font-size:.82rem;opacity:.7">View on Google Maps →</span>
+            </div>
+            <div class="map-address">
+              <strong>HNH Clinical Trial Centre — Room 1401, 14/F</strong>
+              9 Queen's Road Central, Central, Hong Kong Island<br>
+              <span style="color:var(--orange);font-size:.82rem">Near Central MTR Station Exit D1 or D2 · Same building as the Medical Centre</span>
+            </div>
+          </a>
+
+          <div class="hours reveal" style="margin-top:24px">
+            <h3 style="font-family:'Fraunces',serif;color:var(--orange-deep);margin-bottom:14px;font-size:1.1rem">Principal Investigator</h3>
+            <ul class="contact-list" style="margin-top:0">
+              <li>
+                <span class="ic" style="font-size:.78rem;font-weight:700;font-family:'Fraunces',serif">PI</span>
+                <span style="font-size:.88rem">
+                  <strong>Dr George Lau</strong> — Gastroenterology &amp; Hepatology<br>
+                  <a href="tel:+85228613777">(852) 2861 3777</a> · <a href="mailto:gkklau@hnhmgl.com">gkklau@hnhmgl.com</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="appt-form reveal" id="enquiry-form">
+            <h3>Send us an enquiry</h3>
+            <form id="ctcForm" onsubmit="submitForm(event)" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="enquiryType">Enquiry Type *</label>
+                <select class="form-select" id="enquiryType" name="enquiryType" required onchange="updateForm()">
+                  <option value="" disabled selected>I am a…</option>
+                  <option value="patient">Patient or carer — interested in trial participation</option>
+                  <option value="physician">Physician — patient referral</option>
+                  <option value="sponsor">Sponsor or CRO — feasibility request</option>
+                  <option value="general">Other / General enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="firstName">First Name *</label>
+                  <input class="form-input" type="text" id="firstName" name="firstName" placeholder="George" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lastName">Last Name *</label>
+                  <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Lau" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone *</label>
+                  <input class="form-input" type="tel" id="phone" name="phone" placeholder="+852 9000 0000" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+              </div>
+
+              <!-- Patient-specific -->
+              <div id="patient-fields" style="display:none">
+                <div class="form-group">
+                  <label class="form-label" for="diagnosis">Diagnosis / Condition</label>
+                  <input class="form-input" type="text" id="diagnosis" name="diagnosis" placeholder="e.g. NSCLC, HCC, colorectal cancer…">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="priorTx">Prior Treatments Received</label>
+                  <input class="form-input" type="text" id="priorTx" name="priorTx" placeholder="e.g. cisplatin + pemetrexed, sorafenib…">
+                </div>
+              </div>
+
+              <!-- Sponsor-specific -->
+              <div id="sponsor-fields" style="display:none">
+                <div class="form-group">
+                  <label class="form-label" for="company">Company / Organisation *</label>
+                  <input class="form-input" type="text" id="company" name="company" placeholder="Pharma Co. / CRO Ltd.">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="indication">Indication / Therapeutic Area</label>
+                  <input class="form-input" type="text" id="indication" name="indication" placeholder="e.g. HCC, NSCLC, breast cancer…">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phase">Trial Phase</label>
+                  <select class="form-select" id="phase" name="phase">
+                    <option value="" disabled selected>Select phase…</option>
+                    <option>Phase II</option>
+                    <option>Phase III</option>
+                    <option>Phase IV</option>
+                    <option>Phase II/III</option>
+                    <option>Not yet determined</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message *</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Please describe your enquiry…" required></textarea>
+              </div>
+
+              <button class="form-submit" type="submit">Send Enquiry</button>
+            </form>
+            <div class="confirmation" id="confirmation">
+              <strong>Your enquiry has been sent.</strong><br>
+              Our team will respond within one business day. For urgent matters, please call <a href="tel:+85221169283">(852) 2116 9283</a>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR SPONSORS -->
+  <section class="alt">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+        <div class="reveal">
+          <div class="eyebrow">For Sponsors &amp; CROs</div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">Feasibility requests</h2>
+          <p style="margin-top:16px;color:var(--ink-soft)">Email your protocol or synopsis to <a href="mailto:hnhctc@hnhmgl.com" style="color:var(--orange);font-weight:600">hnhctc@hnhmgl.com</a>. We will provide a detailed feasibility response within 5 business days including:</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:14px">
+            <li style="font-size:.92rem;color:var(--ink-soft);padding-left:18px;position:relative">
+              <span style="position:absolute;left:0;color:var(--orange)">–</span>Estimated screen failure rate and basis for that estimate
+            </li>
+            <li style="font-size:.92rem;color:var(--ink-soft);padding-left:18px;position:relative">
+              <span style="position:absolute;left:0;color:var(--orange)">–</span>Projected monthly enrolment and confidence level
+            </li>
+            <li style="font-size:.92rem;color:var(--ink-soft);padding-left:18px;position:relative">
+              <span style="position:absolute;left:0;color:var(--orange)">–</span>Realistic site activation timeline (IRB, CTA, SIV)
+            </li>
+            <li style="font-size:.92rem;color:var(--ink-soft);padding-left:18px;position:relative">
+              <span style="position:absolute;left:0;color:var(--orange)">–</span>Infrastructure fit — any missing equipment or referral dependencies
+            </li>
+            <li style="font-size:.92rem;color:var(--ink-soft);padding-left:18px;position:relative">
+              <span style="position:absolute;left:0;color:var(--orange)">–</span>PI interest and availability
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">For Physicians</div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--orange-deep);line-height:1.2;margin-top:14px">Referring patients</h2>
+          <p style="margin-top:16px;color:var(--ink-soft)">If you have a patient who may be eligible for one of our current studies, please contact us with the patient's diagnosis, stage, and prior treatment history. We will arrange a prompt eligibility review and keep you fully informed of the outcome.</p>
+          <p style="margin-top:12px;color:var(--ink-soft)">Referral letters can be sent to <a href="mailto:hnhctc@hnhmgl.com" style="color:var(--orange);font-weight:600">hnhctc@hnhmgl.com</a>. All communications are handled confidentially.</p>
+          <p style="margin-top:12px;color:var(--ink-soft)">For HCC, NSCLC, colorectal cancer, and breast cancer patients, please see the <a href="participation.html#current-studies" style="color:var(--orange);font-weight:600">current study listings</a> for detailed eligibility criteria before referring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINK BACK TO MEDICAL CENTRE -->
+  <section style="padding:60px 0">
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow">Humanity &amp; Health Medical Centre</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.4vw,1.9rem);color:var(--orange-deep);margin:14px 0 12px">Need a clinical consultation?</h2>
+      <p style="color:var(--ink-soft);max-width:50ch;margin:0 auto 24px">For specialist medical consultations — including hepatology, gastroenterology, surgery, and oncology — visit our main medical centre at the same address.</p>
+      <a class="btn" href="../contact.html">Main Clinic — Make an Appointment</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ctc-footer">
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:1rem;color:#fff">HNH Clinical Trial Centre</div>
+      <div style="margin-top:4px;color:rgba(255,255,255,.6)">Room 1401, 14/F, 9 Queen's Road Central, Central, Hong Kong</div>
+      <div style="margin-top:8px;font-size:.78rem">©2026 HNH Clinical Trial Centre · <a href="../index.html" style="color:var(--orange)">Main Medical Centre ↗</a></div>
+    </div>
+    <a class="btn" href="#enquiry-form" style="background:var(--orange)">Send Enquiry</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const nav=document.getElementById('navlinks');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#navlinks a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open'));
+  });
+
+  function updateForm(){
+    const val=document.getElementById('enquiryType').value;
+    document.getElementById('patient-fields').style.display=(val==='patient'||val==='physician')?'block':'none';
+    document.getElementById('sponsor-fields').style.display=(val==='sponsor')?'block':'none';
+  }
+
+  function submitForm(e){
+    e.preventDefault();
+    const form=document.getElementById('ctcForm');
+    const conf=document.getElementById('confirmation');
+    const required=form.querySelectorAll('[required]');
+    let valid=true;
+    required.forEach(el=>{
+      if(!el.value.trim()){el.style.borderColor='var(--cinnabar)';valid=false;}
+      else el.style.borderColor='';
+    });
+    if(!valid) return;
+    form.style.display='none';
+    conf.style.display='block';
+    conf.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
