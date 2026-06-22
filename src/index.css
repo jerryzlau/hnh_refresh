@@ -66,10 +66,16 @@ nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current="page"]{col
 .lang-toggle:hover{background:var(--orange);color:#fff}
 
 /* ---------- hero (index) ---------- */
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#FAEEDD 0%,var(--ivory) 55%)}
+.hero{position:relative;overflow:hidden;background:#0D1C28;min-height:620px;display:flex;align-items:stretch}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,rgba(10,20,30,.96) 0%,rgba(10,20,30,.88) 38%,rgba(10,20,30,.48) 62%,rgba(10,20,30,.08) 100%);
+}
 .hero .wrap{
-  display:grid;grid-template-columns:56px 1fr 460px;gap:40px;align-items:center;
-  padding-top:84px;padding-bottom:92px;
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:56px 1fr;gap:40px;align-items:center;
+  padding-top:90px;padding-bottom:100px;
 }
 .seal{
   writing-mode:vertical-rl;font-family:'Noto Serif TC',serif;font-weight:600;
@@ -79,24 +85,25 @@ nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current="page"]{col
 }
 .hero h1{
   font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.2rem,4.6vw,3.5rem);
-  line-height:1.12;color:var(--orange-deep);letter-spacing:-.01em;
+  line-height:1.12;color:#fff;letter-spacing:-.01em;
 }
-.hero h1 em{font-style:italic;color:var(--cinnabar)}
+.hero h1 em{font-style:italic;color:var(--orange)}
 .eyebrow{
   font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
   color:var(--cinnabar);margin-bottom:18px;
 }
-.hero p.lead{margin-top:22px;font-size:1.06rem;color:var(--ink-soft);max-width:54ch}
+.hero .eyebrow{color:rgba(255,190,110,.9)}
+.hero p.lead{margin-top:22px;font-size:1.06rem;color:rgba(255,255,255,.72);max-width:54ch}
 .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
-.hero .photo{position:relative}
-.hero .photo img{
-  width:100%;height:520px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.5)}
+.hero .btn.ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hero-nameplate{
+  margin-top:32px;display:inline-flex;flex-direction:column;
+  background:rgba(255,255,255,.09);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 22px;
 }
-.hero .photo .chip{
-  position:absolute;left:-22px;bottom:26px;background:#fff;border-radius:12px;
-  box-shadow:var(--shadow);padding:14px 20px;font-size:.86rem;
-}
-.hero .photo .chip strong{display:block;font-family:'Fraunces',serif;font-size:1.1rem;color:var(--orange-deep)}
+.hero-nameplate strong{font-family:'Fraunces',serif;font-size:1.06rem;color:#fff}
+.hero-nameplate span{font-size:.78rem;color:rgba(255,255,255,.58);letter-spacing:.08em;margin-top:3px}
 
 /* principal physician badge */
 .principal-badge{display:inline-block;background:var(--orange-soft);color:var(--orange-deep);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:8px}
@@ -312,8 +319,7 @@ footer .lic{margin-top:10px;font-size:.78rem}
 @media (max-width:980px){
   .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:64px}
   .seal{display:none}
-  .hero .photo img{height:380px}
-  .hero .photo .chip{left:14px}
+  .hero-overlay{background:linear-gradient(180deg,rgba(10,20,30,.92) 0%,rgba(10,20,30,.82) 60%,rgba(10,20,30,.65) 100%)}
   .svc-grid{grid-template-columns:1fr 1fr}
   .doc-grid{grid-template-columns:1fr 1fr}
   .doc-grid.full{grid-template-columns:1fr}

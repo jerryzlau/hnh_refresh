@@ -238,7 +238,9 @@ export default function Home() {
       <main id="top">
 
         {/* ============ HERO ============ */}
-        <section className="hero" style={{ padding: 0 }}>
+        <section className="hero">
+          <img className="hero-bg" src="/assets/doc-george-lau-hero.jpg" alt={t('home.hero.imgAlt')} />
+          <div className="hero-overlay" aria-hidden="true" />
           <div className="wrap">
             <div className="seal" aria-hidden="true">天下仁心</div>
             <div>
@@ -249,16 +251,9 @@ export default function Home() {
                 <Link className="btn" to="/contact">{t('home.hero.bookCta')}</Link>
                 <Link className="btn ghost" to="/services">{t('home.hero.servicesCta')}</Link>
               </div>
-            </div>
-            <div className="photo">
-              <img
-                src="/assets/doc-george-lau-hero.jpg"
-                alt={t('home.hero.imgAlt')}
-                style={{ objectPosition: 'center top' }}
-              />
-              <div className="chip">
+              <div className="hero-nameplate">
                 <strong>{t('home.hero.chipName')}</strong>
-                {t('home.hero.chipRole')}
+                <span>{t('home.hero.chipRole')}</span>
               </div>
             </div>
           </div>
