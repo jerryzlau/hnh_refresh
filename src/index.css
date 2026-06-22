@@ -70,7 +70,7 @@ nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current="page"]{col
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(10,20,30,.96) 0%,rgba(10,20,30,.88) 38%,rgba(10,20,30,.48) 62%,rgba(10,20,30,.08) 100%);
+  background:linear-gradient(270deg,rgba(10,20,30,.96) 0%,rgba(10,20,30,.88) 38%,rgba(10,20,30,.48) 62%,rgba(10,20,30,.08) 100%);
 }
 .hero .wrap{
   position:relative;z-index:2;
@@ -317,9 +317,11 @@ footer .lic{margin-top:10px;font-size:.78rem}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
-  .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:64px}
+  .hero{flex-direction:column;min-height:0;align-items:stretch}
+  .hero-bg{position:static;width:100%;height:300px;object-fit:cover;object-position:center center;order:2;flex-shrink:0}
+  .hero-overlay{display:none}
+  .hero .wrap{position:static;z-index:auto;order:1;grid-template-columns:1fr;padding:52px 0;background:var(--ink)}
   .seal{display:none}
-  .hero-overlay{background:linear-gradient(180deg,rgba(10,20,30,.92) 0%,rgba(10,20,30,.82) 60%,rgba(10,20,30,.65) 100%)}
   .svc-grid{grid-template-columns:1fr 1fr}
   .doc-grid{grid-template-columns:1fr 1fr}
   .doc-grid.full{grid-template-columns:1fr}
