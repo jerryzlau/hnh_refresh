@@ -96,7 +96,15 @@ nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current="page"]{col
   position:absolute;left:-22px;bottom:26px;background:#fff;border-radius:12px;
   box-shadow:var(--shadow);padding:14px 20px;font-size:.86rem;
 }
-.hero .photo .chip strong{display:block;font-family:'Fraunces',serif;font-size:1.3rem;color:var(--orange)}
+.hero .photo .chip strong{display:block;font-family:'Fraunces',serif;font-size:1.1rem;color:var(--orange-deep)}
+
+/* principal physician badge */
+.principal-badge{display:inline-block;background:var(--orange-soft);color:var(--orange-deep);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:6px}
+
+/* dr lau pull quote */
+.dr-quote{margin:36px auto 0;max-width:680px;border-left:3px solid var(--orange);padding:0 0 0 24px}
+.dr-quote p{font-family:'Fraunces',serif;font-size:clamp(1.08rem,1.6vw,1.28rem);font-style:italic;color:var(--ink);margin:0 0 10px;line-height:1.55}
+.dr-quote cite{font-size:.82rem;font-style:normal;color:var(--ink-soft);letter-spacing:.04em}
 
 /* ---------- page hero (sub-pages) ---------- */
 .page-hero{

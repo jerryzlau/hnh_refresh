@@ -252,12 +252,14 @@ export default function Home() {
             </div>
             <div className="photo">
               <img
-                src="/assets/equip-1.jpg"
-                data-cdn="https://static.wixstatic.com/media/379045_631c5974f8714639ad19277bd2d9c142~mv2.jpg/v1/fill/w_401,h_534,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_E3565_JPG.jpg"
-                onError={e => imgFb(e.currentTarget)}
+                src="/assets/doc-george-lau-hero.jpg"
                 alt={t('home.hero.imgAlt')}
+                style={{ objectPosition: 'center top' }}
               />
-              <div className="chip"><strong>2009</strong>{t('home.hero.chip')}</div>
+              <div className="chip">
+                <strong>{t('home.hero.chipName')}</strong>
+                {t('home.hero.chipRole')}
+              </div>
             </div>
           </div>
         </section>
@@ -270,6 +272,10 @@ export default function Home() {
               <h2>{t('home.about.title')}</h2>
               <p>{t('home.about.body')}</p>
             </div>
+            <blockquote className="dr-quote reveal">
+              <p>"{t('home.hero.quote')}"</p>
+              <cite>— {t('home.hero.quoteAuthor')}</cite>
+            </blockquote>
           </div>
         </section>
 
@@ -378,9 +384,10 @@ export default function Home() {
               <Link className="view-all" to="/doctors">{t('common.viewAllStaff')}</Link>
             </div>
             <div className="doc-grid">
-              <div className="doc reveal">
+              <div className="doc reveal featured">
                 <img src="/assets/doc-george-lau.jpg" data-cdn="https://static.wixstatic.com/media/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg" data-cdn2="https://static.wixstatic.com/media/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg/v1/fill/w_122,h_79,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg" onError={e => imgFb(e.currentTarget)} alt="Dr George Lau" loading="lazy" />
                 <div className="info">
+                  <div className="principal-badge">{t('doctors.george.role')}</div>
                   <h3>Dr George Lau</h3>
                   <div className="spec">{t('doctors.george.spec')}</div>
                   <div className="quals">MB BS (HK) · MRCP (UK) · FHKCP · MD (HK) · FRCP (Edin) · FRCP (Lond) · FHKAM (Medicine)</div>

@@ -43,8 +43,11 @@
       "lead": "Humanity and Health Medical Centre is located in the heart of Hong Kong, combining internationally recognised diagnostic technology with personalised care across gastroenterology & hepatology, surgery, oncology, and more.",
       "bookCta": "Book a consultation",
       "servicesCta": "Explore our services",
-      "imgAlt": "Endoscopy suite at Humanity and Health Medical Centre",
-      "chip": "Caring for patients for over 15 years"
+      "imgAlt": "Dr George Lau, Principal Physician at Humanity and Health Medical Centre",
+      "chipName": "Dr George Lau",
+      "chipRole": "Founder & Principal Physician",
+      "quote": "Precision medicine, combined with personalised care — that has always been our guiding principle.",
+      "quoteAuthor": "Dr George Lau, MD · Founder & Principal Physician"
     },
     "about": {
       "eyebrow": "About the Centre · 中心簡介",
@@ -177,6 +180,7 @@
       "lead": "Internationally trained specialists bringing decades of combined experience in hepatology, gastroenterology, surgery, oncology, and respiratory medicine."
     },
     "george": {
+      "role": "Founder & Principal Physician",
       "spec": "Gastroenterology & Hepatology",
       "bio": "Dr George Lau is a leading authority in viral hepatitis and liver disease in Hong Kong and the Asia-Pacific region. He holds a Doctor of Medicine from The University of Hong Kong and is a Fellow of both the Royal College of Physicians of Edinburgh and London. Dr Lau has published extensively in peer-reviewed journals on hepatitis B and C management, antiviral therapy, and liver fibrosis, and has participated in numerous clinical trials bringing new treatment options to patients. He is committed to combining the latest evidence-based treatments with attentive, personalised care."
     },

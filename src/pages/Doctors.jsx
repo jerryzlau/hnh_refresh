@@ -32,6 +32,7 @@ export default function Doctors() {
                 loading="lazy"
               />
               <div className="info">
+                <div className="principal-badge">{t('doctors.george.role')}</div>
                 <h3>Dr George Lau</h3>
                 <div className="spec">{t('doctors.george.spec')}</div>
                 <div className="quals">MB BS (HK) · MRCP (UK) · FHKCP · MD (HK) · FRCP (Edin) · FRCP (Lond) · FHKAM (Medicine)</div>
