@@ -62,6 +62,8 @@ nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current="page"]{col
 .btn.ghost:hover{background:var(--orange-soft);transform:translateY(-1px)}
 .btn.sm{padding:8px 18px;font-size:.84rem}
 .menu-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--orange);cursor:pointer}
+.lang-toggle{background:none;border:1.5px solid var(--orange);color:var(--orange);font-size:.82rem;font-weight:600;letter-spacing:.08em;padding:5px 13px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap;font-family:'Albert Sans',sans-serif}
+.lang-toggle:hover{background:var(--orange);color:#fff}
 
 /* ---------- hero (index) ---------- */
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#FAEEDD 0%,var(--ivory) 55%)}
@@ -318,6 +320,7 @@ footer .lic{margin-top:10px;font-size:.78rem}
   nav.links a{padding:12px 0;border-bottom:1px solid var(--line)}
   .menu-toggle{display:block}
   .nav .btn{display:none}
+  .lang-toggle{order:-1;margin-left:auto}
 }
 @media (max-width:560px){
   .svc-grid,.doc-grid,.edu-grid{grid-template-columns:1fr}

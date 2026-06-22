@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { imgFb } from '../utils';
-
-const links = [
-  { label: 'Home', to: '/' },
-  { label: 'Services', to: '/services' },
-  { label: 'Medical Staff', to: '/doctors' },
-  { label: 'Health Education', to: '/health-education' },
-  { label: 'Contact', to: '/contact' },
-  { label: 'Clinical Research', to: '/clinical-research' },
-];
 
 export default function Nav() {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const links = [
+    { key: 'nav.home', to: '/' },
+    { key: 'nav.services', to: '/services' },
+    { key: 'nav.doctors', to: '/doctors' },
+    { key: 'nav.healthEd', to: '/health-education' },
+    { key: 'nav.contact', to: '/contact' },
+    { key: 'nav.clinicalResearch', to: '/clinical-research' },
+  ];
 
   function isActive(to) {
     if (to === '/') return pathname === '/';
     return pathname === to || pathname.startsWith(to + '/');
+  }
+
+  function toggleLang() {
+    const next = i18n.language === 'zh' ? 'en' : 'zh';
+    i18n.changeLanguage(next);
+    localStorage.setItem('hnhmgl-lang', next);
   }
 
   return (
@@ -34,25 +42,28 @@ export default function Nav() {
         </Link>
         <button
           className="menu-toggle"
-          aria-label="Open menu"
+          aria-label={t('nav.openMenu')}
           aria-expanded={open}
           onClick={() => setOpen(o => !o)}
         >
           ☰
         </button>
         <nav className={`links${open ? ' open' : ''}`} id="navlinks">
-          {links.map(({ label, to }) => (
+          {links.map(({ key, to }) => (
             <Link
               key={to}
               to={to}
               aria-current={isActive(to) ? 'page' : undefined}
               onClick={() => setOpen(false)}
             >
-              {label}
+              {t(key)}
             </Link>
           ))}
         </nav>
-        <Link className="btn" to="/contact">Make an Appointment</Link>
+        <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
+          {t('nav.langToggle')}
+        </button>
+        <Link className="btn" to="/contact">{t('nav.makeAppt')}</Link>
       </div>
     </header>
   );

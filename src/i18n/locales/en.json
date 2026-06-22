@@ -1,0 +1,536 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "doctors": "Medical Staff",
+    "healthEd": "Health Education",
+    "contact": "Contact",
+    "clinicalResearch": "Clinical Research",
+    "makeAppt": "Make an Appointment",
+    "langToggle": "中文",
+    "openMenu": "Open menu"
+  },
+  "topbar": {
+    "hours": "Mon–Fri 9:00am–6:00pm · Sat 9:00am–1:00pm",
+    "reservations": "Reservations"
+  },
+  "footer": {
+    "licence": "Day Medical Centre Licence No. DP000128 · ©2026 Humanity and Health Medical Centre",
+    "cta": "Make an Appointment"
+  },
+  "common": {
+    "home": "Home",
+    "learnMore": "Learn more →",
+    "bookConsult": "Book a consultation →",
+    "makeAppt": "Make an Appointment",
+    "viewAll": "View all services →",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "clinicalResearch": "Clinical Research",
+    "getInTouch": "Get in touch",
+    "viewAllStaff": "View all medical staff →",
+    "fullContact": "Full contact & appointment form →",
+    "skip": "Skip"
+  },
+  "intro": {
+    "tag": "Hong Kong · Est. 2009"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Serving Hong Kong since 2009",
+      "title": "Precision medicine,<br />delivered with <em>humanity</em>.",
+      "lead": "Humanity and Health Medical Centre is located in the heart of Hong Kong, combining internationally recognised diagnostic technology with personalised care across gastroenterology & hepatology, surgery, oncology, and more.",
+      "bookCta": "Book a consultation",
+      "servicesCta": "Explore our services",
+      "imgAlt": "Endoscopy suite at Humanity and Health Medical Centre",
+      "chip": "Caring for patients for over 15 years"
+    },
+    "about": {
+      "eyebrow": "About the Centre · 中心簡介",
+      "title": "Comprehensive medical and nursing services",
+      "body": "Established in 2009, the Centre is equipped with advanced medical and laboratory instruments providing accurate diagnosis. We have always emphasised precision medicine, combined with personalised care, across specialties including gastroenterology and hepatology, surgery, oncology, obstetrics and gynaecology, neurosurgery, cardiothoracic surgery, and cardiology — and we continue to expand so patients can receive treatment in a quiet, comfortable environment with peace of mind."
+    },
+    "services": {
+      "eyebrow": "Centre Services · 中心服務",
+      "title": "Specialist services for the liver, digestive system and beyond"
+    },
+    "equipment": {
+      "eyebrow": "Centre Equipment · 中心設備",
+      "title": "Advanced diagnostics, monitored end to end",
+      "lead": "From preparation to examination, the whole process is strictly monitored by dedicated doctors and nurses, with a dedicated staff member following up with every patient.",
+      "endoscopy": {
+        "title": "One-stop Endoscopy Centre",
+        "body": "Our centre is equipped with an advanced endoscopic imaging system, and the nurses and technicians involved have received professional training — providing one-stop endoscopic examination and treatment."
+      },
+      "nbi": {
+        "title": "NBI Narrow Band Imaging",
+        "body": "Our Olympus HDTV system features NBI narrow-band imaging technology, which highlights mucosal microstructure and vascular patterns invisible under conventional white light — aiding early detection of subtle lesions."
+      },
+      "fibroscan": {
+        "title": "FibroScan® (Transient Elastography)",
+        "body": "The FibroScan is a non-invasive device for liver stiffness measurement, providing accurate fibrosis staging without the need for biopsy. Results are available within minutes during consultation."
+      },
+      "bowa": {
+        "title": "BOWA 350 ARC Bipolar System",
+        "body": "The BOWA 350 ARC is an advanced bipolar electrosurgical system used for haemorrhoid procedures. It provides precise tissue coagulation with minimal thermal spread, reducing post-operative pain and recovery time."
+      }
+    },
+    "doctors": {
+      "eyebrow": "Medical Staff · 醫療團隊",
+      "title": "Meet our specialist physicians"
+    },
+    "vaccination": {
+      "eyebrow": "Vaccinations · 疫苗接種",
+      "title": "Proactive health management",
+      "body": "We offer a full range of preventive health services including comprehensive health check packages, vaccinations, and cancer screening programmes."
+    },
+    "contact": {
+      "eyebrow": "Contact Us · 聯絡我們",
+      "title": "Make an appointment today",
+      "lead": "Contact us by phone, WhatsApp, email, or online form. Our team will confirm your appointment within one business day.",
+      "hours": "Clinic Hours",
+      "monFri": "Mon – Fri",
+      "monFriHours": "9:00 am – 1:00 pm · 2:00 pm – 6:00 pm",
+      "sat": "Saturday",
+      "satHours": "9:00 am – 1:00 pm",
+      "sunPh": "Sun & Public Holidays",
+      "closed": "Closed"
+    },
+    "cta": {
+      "title": "Specialist care for you and your family",
+      "body": "Book a consultation today. Our specialists are available Monday to Friday 9am–6pm and Saturday 9am–1pm."
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Centre Services · 中心服務",
+      "title": "Specialist services for the liver,<br />digestive system and beyond",
+      "lead": "From hepatology and gastroenterology to surgery and oncology, our team of specialists offers precise, personalised care across a full range of conditions."
+    },
+    "liverHealth": "Liver Health · 肝臟健康",
+    "gastro": "Gastroenterology · 腸胃內科",
+    "surgery": "Surgery · 外科手術",
+    "equipment": "Centre Equipment · 中心設備",
+    "hepb": {
+      "title": "Hepatitis B Evaluation & Treatment",
+      "body": "Nearly one in ten adults in Hong Kong carry the hepatitis B virus (HBV). Transmitted through blood, body fluids, and mother-to-child contact, most carriers are asymptomatic for years while the virus silently damages the liver. Without management, HBV can progress to cirrhosis or liver cancer. Our comprehensive programme includes:",
+      "items": ["HBsAg, anti-HBs and HBeAg serology", "HBV DNA viral load quantification", "Liver function tests (ALT, AST, bilirubin)", "Abdominal ultrasound and liver assessment", "Fibroscan (transient elastography) for fibrosis staging", "Antiviral therapy: tenofovir (TDF) or entecavir (ETV)", "Hepatitis B vaccination for non-immune individuals"]
+    },
+    "hepc": {
+      "title": "Hepatitis C Evaluation & Treatment",
+      "body": "HCV has six major genotypes, all capable of causing acute or chronic hepatitis leading to cirrhosis and liver cancer. Patients rarely notice symptoms until damage is advanced, making regular screening essential. Modern direct-acting antiviral (DAA) regimens now achieve cure rates above 95% in 8–12 weeks. We offer:",
+      "items": ["HCV antibody and PCR RNA testing", "Genotype determination to guide therapy", "Non-invasive liver fibrosis assessment", "DAA treatment regimens (sofosbuvir-based combinations)", "Post-treatment surveillance and follow-up"]
+    },
+    "fibrosis": {
+      "title": "Liver Fibrosis Assessment & Treatment",
+      "body": "Repeated liver inflammation replaces healthy liver cells with fibrous scar tissue. Left untreated, fibrosis progresses to cirrhosis — dramatically increasing the risk of liver failure and cancer. We offer both non-invasive and traditional approaches to staging and treating fibrosis:",
+      "items": ["Fibroscan (transient elastography) — painless, accurate staging", "Blood-based indices: FIB-4, APRI, liver function panel", "Liver biopsy when indicated", "Treatment of underlying cause (antiviral therapy, lifestyle changes)", "Regular monitoring to track progression or regression"]
+    },
+    "liverCancer": {
+      "title": "Liver Cancer Screening & Treatment",
+      "body": "Liver cancer (hepatocellular carcinoma) is the 5th most common cancer in Hong Kong, and typically shows no early symptoms. High-risk individuals — including HBV and HCV carriers, and those with cirrhosis — should undergo regular screening every 6–9 months. Our programme includes:",
+      "items": ["Alpha-fetoprotein (AFP) blood test", "Abdominal ultrasound scan", "CT or MRI for suspicious lesions", "Tumour staging and multidisciplinary treatment planning", "Coordination with surgical and oncology teams"]
+    },
+    "fattyLiver": {
+      "title": "Fatty Liver Disease Assessment & Treatment",
+      "body": "Non-alcoholic fatty liver disease (NAFLD) affects an estimated 30% of adults, closely linked to obesity, type 2 diabetes, and high cholesterol. Without intervention, NAFLD can progress from simple fat accumulation to steatohepatitis (NASH), fibrosis, and cirrhosis. Early detection and treatment is key:",
+      "items": ["Liver function tests and metabolic panel", "Abdominal ultrasound to assess fat deposition", "Fibroscan to evaluate fibrosis stage", "Dietary counselling and exercise prescription", "Management of metabolic risk factors (diabetes, dyslipidaemia)"]
+    },
+    "gastroscopy": {
+      "title": "Gastroscopy",
+      "body": "Upper GI endoscopy allows direct visualisation of the oesophagus, stomach, and duodenum through a flexible camera inserted via the mouth. The procedure is conducted using our advanced Olympus HDTV system with NBI narrow-band imaging for enhanced mucosal detail. Indications include:",
+      "items": ["Dyspepsia, epigastric pain, or bloating", "Gastro-oesophageal reflux disease (GERD)", "Suspected peptic ulcer disease or upper GI bleeding", "Barrett's oesophagus surveillance", "H. pylori testing and eradication confirmation"]
+    },
+    "colonoscopy": {
+      "title": "Colonoscopy",
+      "body": "Colonoscopy is the gold standard for colorectal cancer screening and the evaluation of bowel symptoms. A flexible camera examines the entire colon from the rectum to the caecum, with the ability to biopsy or remove polyps during the same procedure. Our service covers:",
+      "items": ["Colorectal cancer screening (recommended from age 50, or earlier with family history)", "Evaluation of rectal bleeding, change in bowel habit, or unexplained anaemia", "Polyp detection and removal (polypectomy)", "Inflammatory bowel disease (Crohn's, ulcerative colitis) assessment", "Post-operative surveillance after colorectal cancer surgery"]
+    },
+    "hemorrhoids": {
+      "title": "Hemorrhoid Treatment & Surgery",
+      "body": "Haemorrhoids affect up to 75% of people at some point in their lives. Our centre offers a full spectrum of treatment options, from conservative management to minimally invasive procedures and surgical excision, guided by grade and severity:",
+      "items": ["Rubber band ligation for grades I–III internal haemorrhoids", "Haemorrhoidal artery ligation (HAL) with Doppler guidance", "BOWA 350 ARC bipolar diathermy system for precise, low-pain excision", "Circumferential stapled haemorrhoidopexy (PPH)", "Open Milligan-Morgan haemorrhoidectomy for grade IV"]
+    },
+    "hernia": {
+      "title": "Hernia Repair & Intermediate / Minor Surgery",
+      "body": "Inguinal hernias — where abdominal tissue pushes through a weakness in the groin — affect approximately 27% of men and 3% of women over a lifetime. Surgical repair is the only definitive treatment. We perform:",
+      "items": ["Open Lichtenstein tension-free mesh repair (inguinal hernia)", "Laparoscopic (keyhole) TAPP or TEP hernia repair", "Umbilical, incisional and femoral hernia repair", "Minor surgical procedures: cyst excision, skin lesion removal, wound care", "Pre-operative assessment and post-operative follow-up"]
+    },
+    "equipSection": {
+      "title": "State-of-the-art diagnostic and surgical equipment",
+      "lead": "Our centre is furnished with internationally recognised diagnostic and surgical technology, enabling accurate diagnosis and minimally invasive treatment across all specialties.",
+      "endoscopy": { "title": "Olympus HDTV Endoscopy System", "body": "The Olympus EVIS LUCERA system delivers high-definition video endoscopy with NBI (narrow-band imaging) — a special light filter that enhances mucosal surface detail, improving detection of early-stage cancers and pre-cancerous lesions." },
+      "fibroscan": { "title": "FibroScan® 502 Touch", "body": "The Echosens FibroScan 502 Touch is the world-leading device for non-invasive liver fibrosis assessment. Using vibration-controlled transient elastography (VCTE), it measures liver stiffness and controlled attenuation parameter (CAP) simultaneously to quantify both fibrosis and steatosis." },
+      "bowa": { "title": "BOWA 350 ARC Bipolar Electrosurgical System", "body": "The BOWA 350 ARC is used in our haemorrhoid treatment suite. Its bipolar energy delivery achieves precise haemostasis with minimal thermal damage to surrounding tissue, resulting in less post-operative pain and faster recovery compared to conventional diathermy." },
+      "lab": { "title": "On-site Laboratory", "body": "Our in-house laboratory provides rapid blood test processing — including liver function, complete blood count, viral markers, and tumour markers — with results typically available within the same consultation, enabling faster clinical decisions." }
+    },
+    "cta": {
+      "title": "Ready to book a consultation?",
+      "body": "Our specialists are available Monday to Friday 9am–6pm and Saturday 9am–1pm. Call, WhatsApp, or fill in our online form."
+    }
+  },
+  "doctors": {
+    "hero": {
+      "eyebrow": "Medical Staff · 醫療團隊",
+      "title": "Our specialist doctors",
+      "lead": "Internationally trained specialists bringing decades of combined experience in hepatology, gastroenterology, surgery, oncology, and respiratory medicine."
+    },
+    "george": {
+      "spec": "Gastroenterology & Hepatology",
+      "bio": "Dr George Lau is a leading authority in viral hepatitis and liver disease in Hong Kong and the Asia-Pacific region. He holds a Doctor of Medicine from The University of Hong Kong and is a Fellow of both the Royal College of Physicians of Edinburgh and London. Dr Lau has published extensively in peer-reviewed journals on hepatitis B and C management, antiviral therapy, and liver fibrosis, and has participated in numerous clinical trials bringing new treatment options to patients. He is committed to combining the latest evidence-based treatments with attentive, personalised care."
+    },
+    "richard": {
+      "spec": "General Surgery",
+      "bio": "Dr Richard Choi is a Fellow of the Royal Australasian College of Surgeons (FRACS) and a Fellow of the Royal College of Surgeons of Edinburgh. With dual fellowship qualifications in surgery from Australasia and the United Kingdom, Dr Choi brings broad expertise in colorectal surgery, haemorrhoid treatment, hernia repair, and minimally invasive laparoscopic procedures. He places particular emphasis on patient education, ensuring individuals fully understand their condition and treatment options before proceeding."
+    },
+    "patrick": {
+      "spec": "Medical Oncology",
+      "bio": "Dr Patrick Lau graduated from the University of Cambridge and holds triple FRCP fellowships from Glasgow, Edinburgh, and London — a testament to his breadth of clinical training. As the Centre's medical oncologist, Dr Lau specialises in the systemic treatment of cancer including chemotherapy, targeted therapy, and immunotherapy. He brings a compassionate approach to cancer care, working closely with surgical and radiology colleagues to design individualised treatment plans for each patient."
+    },
+    "jane": {
+      "spec": "Respiratory Medicine & Infectious Disease",
+      "bio": "Dr Jane Chan holds an MD from the University of Illinois at Chicago and is triple board-certified by the American Board of Internal Medicine in internal medicine, pulmonary disease, and critical care medicine. A Fellow of the Royal College of Physicians of Edinburgh and a Member of the Hong Kong College of Physicians, Dr Chan specialises in respiratory conditions including asthma, COPD, interstitial lung disease, sleep apnoea, and respiratory infections. Her postgraduate diploma in infectious diseases further equips her to manage complex infectious conditions across systems."
+    },
+    "honorary": "Honorary Consultant: Professor SK Lam — distinguished hepatologist and Professor Emeritus at The University of Hong Kong",
+    "team": {
+      "eyebrow": "Our Team · 團隊",
+      "title": "Dedicated nursing & support staff",
+      "body": "Behind every specialist physician is a team of experienced nurses, endoscopy technicians, and administrative professionals. All nursing and technical staff hold relevant professional qualifications and receive ongoing training to stay current with evolving clinical practice. Every patient is assigned a designated staff member who follows their care journey from initial booking through to post-procedure follow-up."
+    },
+    "nurses": { "title": "Endoscopy Nurses", "body": "Specially trained in endoscopic procedures, patient preparation, and post-procedure monitoring under the Olympus HDTV/NBI system." },
+    "lab": { "title": "Laboratory Technicians", "body": "Qualified medical laboratory technologists processing on-site blood tests for rapid results, supporting fast and accurate clinical decisions." },
+    "coordinators": { "title": "Patient Coordinators", "body": "Dedicated coordinators manage appointments, liaise between specialists, and ensure seamless follow-up for every patient." },
+    "cta": {
+      "eyebrow": "Get in touch",
+      "title": "Book a consultation with one of our specialists",
+      "body": "Available Monday to Friday 9am–6pm and Saturday 9am–1pm. Contact us by phone, WhatsApp, or email."
+    }
+  },
+  "healthEd": {
+    "hero": {
+      "eyebrow": "Health Education · 健康教育",
+      "title": "Your guide to a healthier life",
+      "lead": "Evidence-based health information on the conditions we treat — from liver disease and vaccinations to colorectal health and surgical procedures."
+    },
+    "topics": {
+      "checks": "Health Checks",
+      "vaccination": "Vaccination",
+      "hepb": "Hepatitis B",
+      "hepc": "Hepatitis C",
+      "colorectal": "Colorectal Health",
+      "hemorrhoids": "Hemorrhoids",
+      "hernia": "Hernia",
+      "fattyLiver": "Fatty Liver"
+    },
+    "checks": {
+      "eyebrow": "Health Checks · 身體檢查",
+      "title": "Physical examination packages",
+      "p1": "Regular health examinations allow early detection of chronic diseases and risk factors before symptoms appear. Our packages are tailored to age, sex, and family history.",
+      "p2": "Standard packages include: complete blood count, liver and kidney function tests, fasting blood glucose, lipid profile, thyroid function, chest X-ray, abdominal ultrasound, urine analysis, and cancer markers (AFP, CEA, CA-125 where indicated).",
+      "p3": "Enhanced packages add cardiac evaluation, bone density, hormonal profiles, and specialist consultation with a written report."
+    },
+    "vaccination": {
+      "eyebrow": "Vaccination · 疫苗接種",
+      "title": "Vaccines available at our centre",
+      "p1": "Vaccination is one of the most effective public health interventions. Our centre offers adult vaccination for hepatitis B, hepatitis A, influenza, pneumococcal disease, HPV, shingles (herpes zoster), and COVID-19.",
+      "howTitle": "How vaccines work",
+      "p2": "Vaccines stimulate the immune system to recognise and remember specific pathogens. When subsequently exposed to the real pathogen, the immune system responds rapidly — preventing or reducing the severity of infection.",
+      "covidTitle": "COVID-19 vaccines",
+      "p3": "Multiple COVID-19 vaccine platforms are approved for use in Hong Kong, including mRNA-based vaccines (BioNTech/Pfizer) and inactivated virus vaccines (Sinovac). Booster doses are recommended for individuals with waning immunity, especially those over 60 or with underlying conditions.",
+      "fluTitle": "Influenza vaccine",
+      "p4": "Seasonal influenza vaccines are reformulated annually based on circulating strains predicted by the WHO. Annual vaccination is recommended for elderly individuals, children, pregnant women, and those with chronic diseases.",
+      "sideTitle": "Side effects",
+      "p5": "Common mild side effects include soreness at the injection site, low-grade fever, and fatigue lasting 1–2 days. Serious adverse reactions are rare. Our clinical staff monitor patients for 15–30 minutes post-injection."
+    },
+    "hepb": {
+      "eyebrow": "Hepatitis B · 乙型肝炎",
+      "title": "Understanding and managing hepatitis B",
+      "p1": "Hepatitis B virus (HBV) infects approximately 8–10% of the Hong Kong population — one of the highest prevalence rates in the world. Transmission occurs through blood, body fluids, unprotected sexual contact, and vertical (mother-to-child) transmission during birth.",
+      "chronTitle": "Chronic HBV infection",
+      "p2": "Most adults who acquire HBV clear the infection within six months. However, those infected at birth or in early childhood — as is common in Hong Kong — have a 90% chance of developing chronic infection. Chronic HBV can lead to cirrhosis in 15–25% of cases and significantly elevates liver cancer risk.",
+      "antiviralTitle": "Antiviral therapy",
+      "p3": "Not all HBV carriers require immediate treatment. Indications include elevated viral load (HBV DNA >2,000 IU/mL), elevated ALT, significant liver inflammation or fibrosis on FibroScan, and family history of liver cancer. First-line agents include tenofovir disoproxil (TDF) and entecavir (ETV), both of which are highly effective at suppressing viral replication.",
+      "vaccTitle": "Vaccination",
+      "p4": "The hepatitis B vaccine is highly effective (>95% seroprotection) and is part of Hong Kong's childhood immunisation schedule. Adults who are HBsAg-negative and anti-HBs negative should receive a three-dose course."
+    },
+    "hepc": {
+      "eyebrow": "Hepatitis C · 丙型肝炎",
+      "title": "Hepatitis C: a curable disease",
+      "p1": "Hepatitis C virus (HCV) affects approximately 0.5% of the Hong Kong population. Unlike HBV, there is no preventive vaccine, making early detection and treatment critical. HCV is primarily transmitted through blood-to-blood contact — including shared needles, unsterile medical equipment, and, less commonly, sexual contact.",
+      "genoTitle": "Genotypes and treatment",
+      "p2": "HCV is classified into six major genotypes (GT1–GT6). Genotype determines the choice of direct-acting antiviral (DAA) regimen. Pan-genotypic regimens — such as sofosbuvir/velpatasvir (Epclusa) — are now available and achieve sustained virological response (SVR, i.e. cure) in over 95% of patients within 8–12 weeks of treatment, regardless of genotype.",
+      "noteTitle": "Who should be tested?",
+      "p3": "HCV testing is recommended for anyone who has received a blood transfusion or organ transplant before 1993, has ever injected drugs (even once), has been on haemodialysis, has HIV infection, or has abnormal liver function tests of unknown cause."
+    },
+    "colorectal": {
+      "eyebrow": "Colorectal Health · 大腸健康",
+      "title": "Colorectal cancer screening",
+      "p1": "Colorectal cancer (CRC) is the most common cancer in Hong Kong. Most cases develop from polyps — small growths on the colon lining that are benign initially but can become malignant over 10–15 years if left untreated. Colonoscopy is the most effective tool for both detection and prevention.",
+      "screenTitle": "When to start screening",
+      "p2": "Average-risk individuals should begin colonoscopy screening at age 50 and repeat every 10 years if normal. Those with a first-degree relative diagnosed with CRC under age 60 should start at age 40, or 10 years earlier than the relative's age at diagnosis.",
+      "polypTitle": "Polyps and removal",
+      "p3": "During colonoscopy, any polyps found are typically removed immediately (polypectomy) and sent for pathological analysis. The procedure usually takes 20–45 minutes under sedation and is safe when performed by experienced endoscopists."
+    },
+    "hemorrhoids": {
+      "eyebrow": "Hemorrhoids · 痔瘡",
+      "title": "Hemorrhoid treatment options",
+      "p1": "Haemorrhoids are vascular cushions in the anal canal that become symptomatic when swollen, prolapsed, or thrombosed. They affect up to 75% of people during their lifetime. Symptoms include rectal bleeding (bright red blood on toilet paper or in the toilet), anal itching, and a feeling of incomplete evacuation.",
+      "gradeTitle": "Grading system",
+      "p2": "Internal haemorrhoids are graded I–IV based on the degree of prolapse. Grade I (no prolapse), Grade II (prolapse with spontaneous reduction), Grade III (prolapse requiring manual reduction), and Grade IV (irreducible prolapse). Treatment choice depends on grade and symptoms.",
+      "treatTitle": "Treatment options",
+      "p3": "Grade I–II: rubber band ligation (outpatient, no anaesthesia). Grade II–III: haemorrhoidal artery ligation (HAL) with Doppler guidance, or BOWA 350 ARC bipolar diathermy. Grade III–IV: stapled haemorrhoidopexy (PPH) or Milligan-Morgan haemorrhoidectomy. Our surgeons assess each patient individually to recommend the most appropriate and minimally invasive option."
+    },
+    "hernia": {
+      "eyebrow": "Hernia · 疝氣",
+      "title": "Hernia types and repair",
+      "p1": "A hernia occurs when an internal organ or fatty tissue pushes through a weakness or gap in the surrounding muscle or connective tissue. Inguinal hernias account for 75% of all hernias and are far more common in men. Symptoms include a visible lump in the groin, aching or discomfort especially when bending or coughing, and dragging sensation.",
+      "emergTitle": "Emergency signs",
+      "p2": "A hernia that becomes irreducible (cannot be pushed back in) and is associated with severe pain, nausea, or vomiting may indicate strangulation — a surgical emergency. Seek immediate medical attention.",
+      "repairTitle": "Surgical repair",
+      "p3": "Open Lichtenstein repair (tension-free mesh) is the gold standard for inguinal hernia with a recurrence rate under 1%. Laparoscopic approaches (TAPP or TEP) offer faster recovery and are preferred for bilateral hernias and recurrent cases. Our surgeons discuss all options with each patient."
+    },
+    "fattyLiver": {
+      "eyebrow": "Fatty Liver · 脂肪肝",
+      "title": "Understanding fatty liver disease",
+      "p1": "Fatty liver disease (hepatic steatosis) is characterised by excess fat accumulation in liver cells. There are two main types: non-alcoholic fatty liver disease (NAFLD), related to metabolic syndrome, and alcoholic liver disease (ALD), related to excess alcohol consumption. NAFLD is now the most common chronic liver condition worldwide.",
+      "progTitle": "Disease progression",
+      "p2": "Simple steatosis (fat accumulation without inflammation) is generally benign. However, in 10–20% of NAFLD cases, the disease progresses to non-alcoholic steatohepatitis (NASH), which involves inflammation and hepatocyte injury. NASH can progress to fibrosis, cirrhosis, and ultimately hepatocellular carcinoma.",
+      "manageTitle": "Management",
+      "p3": "No approved pharmacological treatment exists for NAFLD/NASH as of 2025, though several agents are in late-phase trials. The cornerstone of management remains lifestyle modification: sustained weight loss of 7–10% body weight can significantly reduce hepatic steatosis and inflammation. We monitor progression using FibroScan and liver function tests at regular intervals."
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Make an Appointment · 預約",
+      "title": "Contact our medical specialists",
+      "lead": "Reach us by phone, WhatsApp, email, or use the form below to request a consultation. We'll confirm your appointment as soon as possible."
+    },
+    "details": {
+      "eyebrow": "Get in Touch · 聯絡方式",
+      "title": "Contact details",
+      "reservationPhone": "Reservation Phone",
+      "generalEnquiries": "General Enquiries",
+      "address": "Address",
+      "addressLine": "Room 1401–02, 9 Queen's Road Central",
+      "addressCity": "Central, Hong Kong Island",
+      "mapAlt": "9 Queen's Road Central, Central",
+      "mapLink": "View on Google Maps →",
+      "mapAddress": "Room 1401–02, 9 Queen's Road Central, Central, Hong Kong",
+      "mtrNote": "Near Central MTR Station Exit D1 or D2"
+    },
+    "hours": {
+      "title": "Clinic Hours",
+      "monFri": "Monday – Friday",
+      "monFriTimes": "9:00 am – 1:00 pm",
+      "monFriTimes2": "2:00 pm – 6:00 pm",
+      "sat": "Saturday",
+      "satTimes": "9:00 am – 1:00 pm",
+      "sunPh": "Sundays & Public Holidays",
+      "closed": "Closed"
+    },
+    "doctorContacts": "Doctor Direct Contacts",
+    "form": {
+      "eyebrow": "Online Request · 網上預約",
+      "title": "Request an appointment",
+      "body": "Fill in the form and our team will contact you within one business day to confirm your appointment time. For urgent matters please call",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "service": "Service / Reason for Visit",
+      "selectService": "Select a service…",
+      "liverHealth": "Liver Health",
+      "gastroGroup": "Gastroenterology",
+      "surgeryGroup": "Surgery",
+      "generalGroup": "General",
+      "svcHepb": "Hepatitis B Evaluation & Treatment",
+      "svcHepc": "Hepatitis C Evaluation & Treatment",
+      "svcFibrosis": "Liver Fibrosis Assessment",
+      "svcLiverCancer": "Liver Cancer Screening",
+      "svcFattyLiver": "Fatty Liver Disease Assessment",
+      "svcGastroscopy": "Gastroscopy",
+      "svcColonoscopy": "Colonoscopy",
+      "svcHemorrhoid": "Hemorrhoid Treatment",
+      "svcHernia": "Hernia Repair",
+      "svcOtherSurgery": "Other Surgical Consultation",
+      "svcPhysical": "Physical / Health Examination",
+      "svcRespiratory": "Respiratory Medicine",
+      "svcOncology": "Medical Oncology Consultation",
+      "svcOther": "Other / Not Sure",
+      "preferredDate": "Preferred Date",
+      "preferredTime": "Preferred Time",
+      "selectTime": "Select a time…",
+      "morning": "Morning (9:00 am – 1:00 pm)",
+      "afternoon": "Afternoon (2:00 pm – 6:00 pm)",
+      "noPreference": "No preference",
+      "notes": "Additional Notes",
+      "notesPlaceholder": "Please describe your symptoms or any relevant medical history…",
+      "contactMethod": "Preferred Contact Method",
+      "selectContact": "How should we reach you?",
+      "byPhone": "Phone call",
+      "byWhatsApp": "WhatsApp",
+      "byEmail": "Email",
+      "submit": "Submit Appointment Request",
+      "sending": "Sending…",
+      "successTitle": "Thank you — your request has been received.",
+      "successBody": "Our team will contact you within one business day to confirm your appointment. If you need to reach us sooner, please call",
+      "errorMsg": "Something went wrong sending your request — please try again, or call us directly at"
+    },
+    "ctc": {
+      "eyebrow": "Clinical Research · 臨床研究",
+      "title": "HNH Clinical Trial Centre",
+      "body": "Humanity & Health Medical Centre operates a dedicated clinical trial centre — HNH-CTC — conducting research into liver disease, viral hepatitis, and gastroenterology. Dr George Lau serves as Principal Investigator on numerous international clinical trials. Patients who may be eligible for clinical trial participation can enquire through our main appointment line.",
+      "cta": "Visit HNH Clinical Trial Centre →"
+    }
+  },
+  "cr": {
+    "backLink": "← Humanity & Health Medical Centre",
+    "nav": {
+      "overview": "Overview",
+      "about": "About & Team",
+      "services": "Research Services",
+      "participation": "Trial Participation",
+      "rxr": "RevolutionRx",
+      "contact": "Contact"
+    },
+    "index": {
+      "hero": {
+        "eyebrow": "HNH Clinical Trial Centre",
+        "title": "Advancing treatment through<br />rigorous clinical research",
+        "lead": "HNH-CTC is a dedicated GCP-compliant clinical trial centre in central Hong Kong, partnering with global pharmaceutical sponsors to conduct Phase II–IV oncology and hepatology trials.",
+        "cta1": "View Current Studies",
+        "cta2": "Refer a Patient"
+      },
+      "stats": {
+        "trials": "Trials Completed",
+        "patients": "Patients Enrolled",
+        "partners": "Sponsor Partners",
+        "years": "Years Active"
+      },
+      "studies": {
+        "eyebrow": "Current Studies · 現行研究",
+        "title": "Actively recruiting",
+        "recruiting": "Recruiting"
+      },
+      "publications": {
+        "eyebrow": "Selected Publications",
+        "title": "Research output",
+        "if": "Impact Factor"
+      },
+      "achievements": {
+        "eyebrow": "Recognition",
+        "title": "Awards & milestones"
+      },
+      "ctaTitle": "Partner with HNH-CTC",
+      "ctaBody": "We welcome enquiries from pharmaceutical sponsors, CROs, and academic partners seeking a high-quality GCP site in Hong Kong.",
+      "ctaBtn": "Contact the Research Team"
+    },
+    "about": {
+      "hero": {
+        "eyebrow": "About HNH-CTC",
+        "title": "Our research team & mission",
+        "lead": "HNH-CTC was established to bring cutting-edge clinical trials to Hong Kong patients, with a focus on hepatology, oncology, and gastroenterology."
+      },
+      "pi": {
+        "eyebrow": "Principal Investigator",
+        "role": "Principal Investigator & Medical Director",
+        "affiliation": "Professor of Medicine, The University of Hong Kong"
+      },
+      "areas": {
+        "eyebrow": "Therapeutic Focus",
+        "title": "Our research areas"
+      },
+      "values": {
+        "eyebrow": "Our Values",
+        "title": "What drives our research"
+      }
+    },
+    "services": {
+      "hero": {
+        "eyebrow": "Research Services",
+        "title": "Full-service clinical trial capabilities",
+        "lead": "From Phase II proof-of-concept to Phase IV real-world evidence, HNH-CTC provides end-to-end trial management in a GCP-compliant environment."
+      },
+      "phases": "Trial Phases",
+      "facilities": "Facilities & Equipment",
+      "support": "Support Services",
+      "timeline": {
+        "eyebrow": "Site Activation",
+        "title": "From enquiry to first patient enrolled"
+      },
+      "cta": {
+        "title": "Ready to activate a study?",
+        "body": "Contact our research team to discuss your protocol requirements."
+      }
+    },
+    "participation": {
+      "hero": {
+        "eyebrow": "Trial Participation",
+        "title": "Join a clinical trial",
+        "lead": "Clinical trials offer access to cutting-edge treatments not yet widely available. Our team ensures every participant receives comprehensive information and support throughout the process."
+      },
+      "tabs": {
+        "patients": "For Patients",
+        "sponsors": "For Sponsors"
+      },
+      "faq": "Frequently Asked Questions",
+      "eligibility": {
+        "eyebrow": "Current Studies",
+        "title": "Open studies — eligibility criteria",
+        "inclusion": "Inclusion Criteria",
+        "exclusion": "Exclusion Criteria",
+        "enquire": "Enquire About This Study"
+      },
+      "cta": {
+        "title": "Have questions about participating?",
+        "body": "Our research coordinators are happy to discuss any study in detail before you make a decision.",
+        "btn": "Contact the Research Team"
+      }
+    },
+    "rxr": {
+      "hero": {
+        "eyebrow": "RevolutionRx · 醫療革新",
+        "title": "Breakthroughs shaping oncology practice",
+        "lead": "Updates on landmark trials and emerging therapies across the tumour types we study at HNH-CTC."
+      },
+      "cta": {
+        "title": "Interested in participating in a trial?",
+        "body": "Contact our research team or refer a patient.",
+        "btn": "Contact Research Team"
+      }
+    },
+    "contact": {
+      "hero": {
+        "eyebrow": "Contact HNH-CTC",
+        "title": "Get in touch with our research team",
+        "lead": "Whether you're a patient, physician, or sponsor, we're here to answer your questions about our clinical trials programme."
+      },
+      "form": {
+        "eyebrow": "Send a Message",
+        "title": "Research enquiry form",
+        "type": "Enquiry Type",
+        "selectType": "Select enquiry type…",
+        "patient": "Patient (self-referral)",
+        "physician": "Physician (patient referral)",
+        "sponsor": "Sponsor / CRO",
+        "other": "Other",
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "hospital": "Hospital / Institution",
+        "diagnosis": "Diagnosis / Tumour Type",
+        "priorTx": "Prior Treatments",
+        "company": "Company Name",
+        "indication": "Indication / Therapeutic Area",
+        "phase": "Trial Phase",
+        "message": "Message",
+        "submit": "Send Enquiry",
+        "sending": "Sending…",
+        "successTitle": "Thank you — your enquiry has been received.",
+        "successBody": "A member of our research team will be in touch within two business days.",
+        "errorMsg": "Something went wrong. Please try again or email us directly."
+      }
+    }
+  }
+}

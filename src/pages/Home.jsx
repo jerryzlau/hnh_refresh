@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useReveal } from '../hooks/useReveal';
 import { imgFb } from '../utils';
 
@@ -10,6 +11,7 @@ function IntroAnimation({ onDone }) {
   const canvasRef = useRef(null);
   const ovRef = useRef(null);
   const [textVisible, setTextVisible] = useState({ zh: false, en: false, tag: false });
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -209,9 +211,9 @@ function IntroAnimation({ onDone }) {
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', pointerEvents: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
         <div className={`i-zh${textVisible.zh ? ' v' : ''}`}>天下仁心</div>
         <div className={`i-en${textVisible.en ? ' v' : ''}`}>Humanity &amp; Health Medical Centre</div>
-        <div className={`i-tag${textVisible.tag ? ' v' : ''}`}>Hong Kong · Est.&nbsp;2009</div>
+        <div className={`i-tag${textVisible.tag ? ' v' : ''}`}>{t('intro.tag')}</div>
       </div>
-      <button className="i-skip" onClick={() => window.__endIntro && window.__endIntro()}>Skip</button>
+      <button className="i-skip" onClick={() => window.__endIntro && window.__endIntro()}>{t('common.skip')}</button>
     </div>
   );
 }
@@ -221,6 +223,7 @@ function IntroAnimation({ onDone }) {
    ============================================================ */
 export default function Home() {
   const [introVisible, setIntroVisible] = useState(() => !localStorage.getItem('hnhmgl-intro-seen'));
+  const { t } = useTranslation();
   useReveal();
 
   function handleIntroDone() {
@@ -239,12 +242,12 @@ export default function Home() {
           <div className="wrap">
             <div className="seal" aria-hidden="true">天下仁心</div>
             <div>
-              <div className="eyebrow">Serving Hong Kong since 2009</div>
-              <h1>Precision medicine,<br />delivered with <em>humanity</em>.</h1>
-              <p className="lead">Humanity and Health Medical Centre is located in the heart of Hong Kong, combining internationally recognised diagnostic technology with personalised care across gastroenterology &amp; hepatology, surgery, oncology, and more.</p>
+              <div className="eyebrow">{t('home.hero.eyebrow')}</div>
+              <h1 dangerouslySetInnerHTML={{ __html: t('home.hero.title') }} />
+              <p className="lead">{t('home.hero.lead')}</p>
               <div className="cta">
-                <Link className="btn" to="/contact">Book a consultation</Link>
-                <Link className="btn ghost" to="/services">Explore our services</Link>
+                <Link className="btn" to="/contact">{t('home.hero.bookCta')}</Link>
+                <Link className="btn ghost" to="/services">{t('home.hero.servicesCta')}</Link>
               </div>
             </div>
             <div className="photo">
@@ -252,9 +255,9 @@ export default function Home() {
                 src="/assets/equip-1.jpg"
                 data-cdn="https://static.wixstatic.com/media/379045_631c5974f8714639ad19277bd2d9c142~mv2.jpg/v1/fill/w_401,h_534,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_E3565_JPG.jpg"
                 onError={e => imgFb(e.currentTarget)}
-                alt="Endoscopy suite at Humanity and Health Medical Centre"
+                alt={t('home.hero.imgAlt')}
               />
-              <div className="chip"><strong>2009</strong>Caring for patients for over 15 years</div>
+              <div className="chip"><strong>2009</strong>{t('home.hero.chip')}</div>
             </div>
           </div>
         </section>
@@ -263,9 +266,9 @@ export default function Home() {
         <section>
           <div className="wrap">
             <div className="sec-head reveal">
-              <div className="eyebrow">About the Centre · 中心簡介</div>
-              <h2>Comprehensive medical and nursing services</h2>
-              <p>Established in 2009, the Centre is equipped with advanced medical and laboratory instruments providing accurate diagnosis. We have always emphasised precision medicine, combined with personalised care, across specialties including gastroenterology and hepatology, surgery, oncology, obstetrics and gynaecology, neurosurgery, cardiothoracic surgery, and cardiology — and we continue to expand so patients can receive treatment in a quiet, comfortable environment with peace of mind. Since opening, we have continuously introduced advanced equipment, partnered with specialist doctors, and hired qualified nursing and technical staff to ensure every patient receives appropriate care.</p>
+              <div className="eyebrow">{t('home.about.eyebrow')}</div>
+              <h2>{t('home.about.title')}</h2>
+              <p>{t('home.about.body')}</p>
             </div>
           </div>
         </section>
@@ -274,64 +277,64 @@ export default function Home() {
         <section className="alt" id="services">
           <div className="wrap">
             <div className="sec-head reveal">
-              <div className="eyebrow">Centre Services · 中心服務</div>
-              <h2>Specialist services for the liver, digestive system and beyond</h2>
-              <Link className="view-all" to="/services">View all services →</Link>
+              <div className="eyebrow">{t('home.services.eyebrow')}</div>
+              <h2>{t('home.services.title')}</h2>
+              <Link className="view-all" to="/services">{t('common.viewAll')}</Link>
             </div>
             <div className="svc-grid">
               <div className="svc reveal">
                 <img src="/assets/svc-hepb.jpg" data-cdn="https://static.wixstatic.com/media/11062b_d74a331a352b46dea8e1687d01ab8a78~mv2.jpeg/v1/crop/x_1120,y_0,w_4480,h_4480/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E9%86%AB%E7%99%82%E9%9A%8A.jpeg" onError={e => imgFb(e.currentTarget)} alt="Medical team" loading="lazy" />
-                <h3>Hepatitis B Evaluation &amp; Treatment</h3>
-                <p>Nearly one in ten adults in Hong Kong are HBV carriers. The virus can cause acute or chronic hepatitis, cirrhosis or liver cancer — regular hepatitis B liver tests help ensure liver health.</p>
-                <Link className="more" to="/services#hepb">Learn more →</Link>
+                <h3>{t('services.hepb.title')}</h3>
+                <p>{t('services.hepb.items.0')}</p>
+                <Link className="more" to="/services#hepb">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-fibrosis.jpg" data-cdn="https://static.wixstatic.com/media/11062b_aa6818fb704a4824a6607192ae95da67~mv2.jpeg/v1/crop/x_1000,y_0,w_4000,h_4000/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E9%86%AB%E7%94%9F%E5%92%8C%E7%97%85%E4%BA%BA.jpeg" onError={e => imgFb(e.currentTarget)} alt="Doctor with patient" loading="lazy" />
-                <h3>Liver Fibrosis Assessment &amp; Treatment</h3>
-                <p>Chronic liver disease keeps the liver inflamed, gradually forming fibrosis. Excess fibre accumulation progresses to cirrhosis — a main cause of liver failure and liver cancer.</p>
-                <Link className="more" to="/services#fibrosis">Learn more →</Link>
+                <h3>{t('services.fibrosis.title')}</h3>
+                <p>{t('services.fibrosis.items.0')}</p>
+                <Link className="more" to="/services#fibrosis">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-hepc.jpg" data-cdn="https://static.wixstatic.com/media/ea997dc9475841f2a7709e8098764f30.jpg/v1/crop/x_128,y_0,w_2671,h_2671/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E5%8F%8B%E5%A5%BD%E5%B9%B4%E8%BC%95%E9%86%AB%E7%94%9F.jpg" onError={e => imgFb(e.currentTarget)} alt="Friendly young doctor" loading="lazy" />
-                <h3>Hepatitis C Evaluation &amp; Treatment</h3>
-                <p>HCV has six genotypes, all of which can cause acute or chronic hepatitis that may develop into cirrhosis or liver cancer. Confirmed patients need regular liver function tests and follow-up.</p>
-                <Link className="more" to="/services#hepc">Learn more →</Link>
+                <h3>{t('services.hepc.title')}</h3>
+                <p>{t('services.hepc.items.0')}</p>
+                <Link className="more" to="/services#hepc">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-cancer.jpg" data-cdn="https://static.wixstatic.com/media/11062b_2670f3edbdaf4e3386e49f3274bb96e3~mv2.jpg/v1/crop/x_690,y_0,w_3570,h_3570/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E6%94%AF%E6%8C%81%E9%86%AB%E7%94%9F.jpg" onError={e => imgFb(e.currentTarget)} alt="Supporting doctors" loading="lazy" />
-                <h3>Liver Cancer Screening &amp; Treatment</h3>
-                <p>Liver cancer is the fifth most common cancer in Hong Kong and often shows no early symptoms. High-risk individuals should undergo liver function, alpha-fetoprotein and ultrasound checks every 6–9 months.</p>
-                <Link className="more" to="/services#liver-cancer">Learn more →</Link>
+                <h3>{t('services.liverCancer.title')}</h3>
+                <p>{t('services.liverCancer.items.0')}</p>
+                <Link className="more" to="/services#liver-cancer">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-consult.jpg" data-cdn="https://static.wixstatic.com/media/11062b_4db9398f08b34877b8d7735d43d4957b~mv2.jpg/v1/crop/x_834,y_0,w_3333,h_3333/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E7%B6%B2%E4%B8%8A%E9%86%AB%E7%99%82%E9%A1%A7%E5%95%8F.jpg" onError={e => imgFb(e.currentTarget)} alt="Medical consultant" loading="lazy" />
-                <h3>Fatty Liver Disease Assessment &amp; Treatment</h3>
-                <p>Fatty liver — whether non-alcoholic or alcohol-related — shows no early symptoms but can progress to fibrosis, cirrhosis and even liver cancer. Regular liver examinations enable early treatment.</p>
-                <Link className="more" to="/services#fatty-liver">Learn more →</Link>
+                <h3>{t('services.fattyLiver.title')}</h3>
+                <p>{t('services.fattyLiver.items.0')}</p>
+                <Link className="more" to="/services#fatty-liver">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-gastro.jpg" data-cdn="https://static.wixstatic.com/media/11062b_4ebfd43bcda34322a29ca6f1c23eff76~mv2_d_5100_3399_s_4_2.jpg/v1/crop/x_851,y_0,w_3399,h_3399/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E6%89%8B%E8%A1%93%E5%AE%A4%E7%9A%84%E5%A4%96%E7%A7%91%E9%86%AB%E7%94%9F.jpg" onError={e => imgFb(e.currentTarget)} alt="Surgeon in operating room" loading="lazy" />
-                <h3>Gastroscopy</h3>
-                <p>A flexible tube enters the upper gastrointestinal tract through the mouth to check for inflammation, ulcers, tumours or internal bleeding. Tissue sampling and polypectomy can be performed if needed.</p>
-                <Link className="more" to="/services#gastroscopy">Learn more →</Link>
+                <h3>{t('services.gastroscopy.title')}</h3>
+                <p>{t('services.gastroscopy.items.0')}</p>
+                <Link className="more" to="/services#gastroscopy">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-consult.jpg" data-cdn="https://static.wixstatic.com/media/11062b_4db9398f08b34877b8d7735d43d4957b~mv2.jpg/v1/crop/x_834,y_0,w_3333,h_3333/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E7%B6%B2%E4%B8%8A%E9%86%AB%E7%99%82%E9%A1%A7%E5%95%8F.jpg" onError={e => imgFb(e.currentTarget)} alt="Colonoscopy consultation" loading="lazy" />
-                <h3>Colonoscopy</h3>
-                <p>A flexible tube examines the sigmoid, descending, transverse and ascending colon and cecum for inflammation, ulcers, tumours or lesions, with tissue sampling and polypectomy available when needed.</p>
-                <Link className="more" to="/services#colonoscopy">Learn more →</Link>
+                <h3>{t('services.colonoscopy.title')}</h3>
+                <p>{t('services.colonoscopy.items.0')}</p>
+                <Link className="more" to="/services#colonoscopy">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-hemorrhoid.jpg" data-cdn="https://static.wixstatic.com/media/11062b_ebed553b419a414fadd847af8f58f23f~mv2_d_8660_5773_s_4_2.jpg/v1/crop/x_1444,y_0,w_5773,h_5773/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E6%89%8B%E8%A1%93%E6%9C%9F%E9%96%93%E7%9A%84%E5%A4%96%E7%A7%91%E9%86%AB%E7%94%9F.jpg" onError={e => imgFb(e.currentTarget)} alt="Surgeon during surgery" loading="lazy" />
-                <h3>Hemorrhoid Treatment &amp; Surgery</h3>
-                <p>From rubber band ligation to circumferential hemorrhoidectomy, Doppler-guided artery ligation (HAL), and bipolar vascular closure (BOWA 350 diathermy) — minimally invasive options with faster recovery.</p>
-                <Link className="more" to="/services#hemorrhoids">Learn more →</Link>
+                <h3>{t('services.hemorrhoids.title')}</h3>
+                <p>{t('services.hemorrhoids.items.0')}</p>
+                <Link className="more" to="/services#hemorrhoids">{t('common.learnMore')}</Link>
               </div>
               <div className="svc reveal">
                 <img src="/assets/svc-surgery.jpg" data-cdn="https://static.wixstatic.com/media/04b70ad4e4af4a9290c1769bf2b63030.jpg/v1/crop/x_854,y_0,w_3414,h_3414/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E6%89%8B%E8%A1%93.jpg" onError={e => imgFb(e.currentTarget)} alt="Operation in progress" loading="lazy" />
-                <h3>Hernia Repair &amp; Intermediate / Minor Surgery</h3>
-                <p>Surgical treatment of inguinal and wound hernias, plus tumour removal, partial organ removal, chest, heart and neurosurgery, body remodelling and palliative procedures.</p>
-                <Link className="more" to="/services#hernia">Learn more →</Link>
+                <h3>{t('services.hernia.title')}</h3>
+                <p>{t('services.hernia.items.0')}</p>
+                <Link className="more" to="/services#hernia">{t('common.learnMore')}</Link>
               </div>
             </div>
           </div>
@@ -341,18 +344,20 @@ export default function Home() {
         <section id="equipment">
           <div className="wrap">
             <div className="sec-head reveal">
-              <div className="eyebrow">Centre Equipment · 中心設備</div>
-              <h2>Advanced diagnostics, monitored end to end</h2>
-              <p>From preparation to examination, the whole process is strictly monitored by dedicated doctors and nurses, with a dedicated staff member following up with every patient.</p>
+              <div className="eyebrow">{t('home.equipment.eyebrow')}</div>
+              <h2>{t('home.equipment.title')}</h2>
+              <p>{t('home.equipment.lead')}</p>
             </div>
             <div className="equip">
               <div className="text reveal">
-                <h3>One-stop Endoscopy Centre</h3>
-                <p>Our centre is equipped with an advanced endoscopic imaging system, and the nurses and technicians involved have received professional training — providing one-stop endoscopic examination and treatment.</p>
-                <h3>NBI Narrow Band Imaging</h3>
-                <p>By filtering out longer-wavelength red light and retaining blue and green light, micro-blood-vessel changes — even mucosal tissue and colour changes that were previously hard to detect — are shown clearly, helping locate lesions or cancer early and accurately.</p>
-                <h3>HDTV High-Definition Image Processing</h3>
-                <p>The Endoscopy Centre uses the advanced Olympus CV-290 HDTV image processing system together with the Olympus GIF Type H260 endoscope, significantly improving image quality for clearer, more accurate diagnosis and treatment.</p>
+                <h3>{t('home.equipment.endoscopy.title')}</h3>
+                <p>{t('home.equipment.endoscopy.body')}</p>
+                <h3>{t('home.equipment.nbi.title')}</h3>
+                <p>{t('home.equipment.nbi.body')}</p>
+                <h3>{t('home.equipment.fibroscan.title')}</h3>
+                <p>{t('home.equipment.fibroscan.body')}</p>
+                <h3>{t('home.equipment.bowa.title')}</h3>
+                <p>{t('home.equipment.bowa.body')}</p>
               </div>
               <div className="gallery reveal">
                 <img src="/assets/equip-1.jpg" data-cdn="https://static.wixstatic.com/media/379045_631c5974f8714639ad19277bd2d9c142~mv2.jpg/v1/fill/w_401,h_534,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_E3565_JPG.jpg" onError={e => imgFb(e.currentTarget)} alt="Endoscopy equipment" loading="lazy" />
@@ -368,16 +373,16 @@ export default function Home() {
         <section className="alt" id="doctors">
           <div className="wrap">
             <div className="sec-head reveal">
-              <div className="eyebrow">Medical Staff · 醫療團隊</div>
-              <h2>Our specialist doctors</h2>
-              <Link className="view-all" to="/doctors">View all medical staff →</Link>
+              <div className="eyebrow">{t('home.doctors.eyebrow')}</div>
+              <h2>{t('home.doctors.title')}</h2>
+              <Link className="view-all" to="/doctors">{t('common.viewAllStaff')}</Link>
             </div>
             <div className="doc-grid">
               <div className="doc reveal">
                 <img src="/assets/doc-george-lau.jpg" data-cdn="https://static.wixstatic.com/media/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg" data-cdn2="https://static.wixstatic.com/media/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg/v1/fill/w_122,h_79,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/379045_54b5b9f3ccd04f8ca21026652aff4329~mv2.jpg" onError={e => imgFb(e.currentTarget)} alt="Dr George Lau" loading="lazy" />
                 <div className="info">
                   <h3>Dr George Lau</h3>
-                  <div className="spec">Gastroenterology &amp; Hepatology</div>
+                  <div className="spec">{t('doctors.george.spec')}</div>
                   <div className="quals">MB BS (HK) · MRCP (UK) · FHKCP · MD (HK) · FRCP (Edin) · FRCP (Lond) · FHKAM (Medicine)</div>
                   <div className="contact"><a href="tel:+85228613777">(852) 2861 3777</a><br /><a href="mailto:gkklau@hnhmgl.com">gkklau@hnhmgl.com</a></div>
                 </div>
@@ -386,7 +391,7 @@ export default function Home() {
                 <img src="/assets/doc-richard-choi.jpg" data-cdn="https://static.wixstatic.com/media/379045_8bdd93b57d8e41e1b5705d2b632f07f0~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_8bdd93b57d8e41e1b5705d2b632f07f0~mv2.jpg" data-cdn2="https://static.wixstatic.com/media/379045_8bdd93b57d8e41e1b5705d2b632f07f0~mv2.jpg/v1/fill/w_122,h_79,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/379045_8bdd93b57d8e41e1b5705d2b632f07f0~mv2.jpg" onError={e => imgFb(e.currentTarget)} alt="Dr Richard Choi" loading="lazy" />
                 <div className="info">
                   <h3>Dr Richard Choi</h3>
-                  <div className="spec">General Surgery</div>
+                  <div className="spec">{t('doctors.richard.spec')}</div>
                   <div className="quals">MB BS (HK) · DPD (Wales) · FRACS · FRCS (Edin) · FCSHK · FHKAM (Surgery)</div>
                   <div className="contact"><a href="tel:+85293498851">(852) 9349 8851</a><br /><a href="https://wa.me/93498851">WhatsApp</a></div>
                 </div>
@@ -395,7 +400,7 @@ export default function Home() {
                 <img src="/assets/doc-patrick-lau.jpg" data-cdn="https://static.wixstatic.com/media/379045_4a31d9482e454378898b131b8c485ad6~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_4a31d9482e454378898b131b8c485ad6~mv2.jpg" data-cdn2="https://static.wixstatic.com/media/379045_4a31d9482e454378898b131b8c485ad6~mv2.jpg/v1/fill/w_122,h_76,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/379045_4a31d9482e454378898b131b8c485ad6~mv2.jpg" onError={e => imgFb(e.currentTarget)} alt="Dr Patrick Lau" loading="lazy" />
                 <div className="info">
                   <h3>Dr Patrick Lau</h3>
-                  <div className="spec">Medical Oncology</div>
+                  <div className="spec">{t('doctors.patrick.spec')}</div>
                   <div className="quals">MB BChir (Cambridge) · MRCP (UK) · FRCP (Glasg) · FRCP (Edin) · FRCP (Lond) · FHKCP · FHKAM</div>
                   <div className="contact"><a href="tel:+85228613777">(852) 2861 3777</a><br /><a href="mailto:drpatrick.lau@hnhmgl.com">drpatrick.lau@hnhmgl.com</a></div>
                 </div>
@@ -404,7 +409,7 @@ export default function Home() {
                 <img src="/assets/doc-jane-chan.jpg" data-cdn="https://static.wixstatic.com/media/379045_60df67c157eb4749a0b9fe7736b95b3a~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/379045_60df67c157eb4749a0b9fe7736b95b3a~mv2.jpg" data-cdn2="https://static.wixstatic.com/media/379045_60df67c157eb4749a0b9fe7736b95b3a~mv2.jpg/v1/fill/w_129,h_87,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/379045_60df67c157eb4749a0b9fe7736b95b3a~mv2.jpg" onError={e => imgFb(e.currentTarget)} alt="Dr Chan Chun Kwong, Jane" loading="lazy" />
                 <div className="info">
                   <h3>Dr Chan Chun Kwong, Jane</h3>
-                  <div className="spec">Respiratory Medicine</div>
+                  <div className="spec">{t('doctors.jane.spec')}</div>
                   <div className="quals">LMCHK · MD (Chicago USA) · DABIM · FHKCP · FHKAM (Medicine) · DABIM (Pulmonary D) · DABIM (Critical Care Med) · FRCP (Edin) · PDipID (HK)</div>
                   <div className="contact"><a href="tel:+85228613777">(852) 2861 3777</a></div>
                 </div>
@@ -418,9 +423,9 @@ export default function Home() {
         <section className="vax" id="vaccination">
           <div className="wrap">
             <div className="reveal">
-              <div className="eyebrow" style={{ color: '#FFD0A6' }}>Health Promotion · 健康推廣</div>
-              <h2>COVID-19 Vaccination Programme</h2>
-              <p>Citizens can make an appointment to receive the vaccine at our private clinic vaccination station, or book directly with participating doctors and clinics, for the Sinovac or Pfizer-BioNTech vaccine. Eligible Hong Kong residents (aged 6 months to under 18, or 50 and above) can choose to receive a free influenza vaccination at the same time at designated sites.</p>
+              <div className="eyebrow" style={{ color: '#FFD0A6' }}>{t('home.vaccination.eyebrow')}</div>
+              <h2>{t('home.vaccination.title')}</h2>
+              <p>{t('home.vaccination.body')}</p>
               <div className="loc">
                 <strong>mRNA COVID-19 vaccine (toddler formulation available)</strong><br />
                 Private Clinic COVID-19 Vaccination Station<br />
@@ -432,13 +437,13 @@ export default function Home() {
             <aside className="reveal">
               <h3>Patient education resources</h3>
               <ul>
-                <li><Link to="/health-education#health-checks">Physical Examination Plans</Link></li>
-                <li><Link to="/health-education#vaccination">Vaccination</Link></li>
-                <li><Link to="/health-education#hepb">Understanding Hepatitis B</Link></li>
-                <li><Link to="/health-education#hepc">Understanding Hepatitis C</Link></li>
-                <li><Link to="/health-education#colorectal">Colorectal Cancer Screening</Link></li>
-                <li><Link to="/health-education#hemorrhoids">Understanding Hemorrhoids</Link></li>
-                <li><Link to="/health-education#hernia">Understanding Inguinal Hernia</Link></li>
+                <li><Link to="/health-education#health-checks">{t('healthEd.topics.checks')}</Link></li>
+                <li><Link to="/health-education#vaccination">{t('healthEd.topics.vaccination')}</Link></li>
+                <li><Link to="/health-education#hepb">{t('healthEd.topics.hepb')}</Link></li>
+                <li><Link to="/health-education#hepc">{t('healthEd.topics.hepc')}</Link></li>
+                <li><Link to="/health-education#colorectal">{t('healthEd.topics.colorectal')}</Link></li>
+                <li><Link to="/health-education#hemorrhoids">{t('healthEd.topics.hemorrhoids')}</Link></li>
+                <li><Link to="/health-education#hernia">{t('healthEd.topics.hernia')}</Link></li>
               </ul>
             </aside>
           </div>
@@ -448,36 +453,36 @@ export default function Home() {
         <section id="contact">
           <div className="wrap">
             <div className="sec-head reveal">
-              <div className="eyebrow">Make an Appointment · 預約</div>
-              <h2>Contact our medical specialists</h2>
-              <Link className="view-all" to="/contact">Full contact &amp; appointment form →</Link>
+              <div className="eyebrow">{t('home.contact.eyebrow')}</div>
+              <h2>{t('home.contact.title')}</h2>
+              <Link className="view-all" to="/contact">{t('common.fullContact')}</Link>
             </div>
             <div className="contact-grid">
               <ul className="contact-list reveal">
                 <li>
                   <span className="ic">☎</span>
-                  <span><strong>Reservation phone</strong><br /><a href="tel:+85228613777">+852 2861 3777</a></span>
+                  <span><strong>{t('common.phone')}</strong><br /><a href="tel:+85228613777">+852 2861 3777</a></span>
                 </li>
                 <li>
                   <span className="ic">✆</span>
-                  <span><strong>WhatsApp</strong><br /><a href="https://wa.me/+85297423389">+852 9742 3389</a></span>
+                  <span><strong>{t('common.whatsapp')}</strong><br /><a href="https://wa.me/+85297423389">+852 9742 3389</a></span>
                 </li>
                 <li>
                   <span className="ic">✉</span>
-                  <span><strong>Email</strong><br /><a href="mailto:info@hnhmgl.com">info@hnhmgl.com</a></span>
+                  <span><strong>{t('common.email')}</strong><br /><a href="mailto:info@hnhmgl.com">info@hnhmgl.com</a></span>
                 </li>
                 <li>
                   <span className="ic">⌖</span>
-                  <span><strong>Address</strong><br />Room 1401–02, 9 Queen's Road Central, Central, Hong Kong</span>
+                  <span><strong>{t('contact.details.address')}</strong><br />{t('contact.details.addressLine')}, {t('contact.details.addressCity')}</span>
                 </li>
               </ul>
               <div className="hours reveal">
-                <h3 style={{ fontFamily: "'Fraunces',serif", color: 'var(--orange-deep)', marginBottom: '14px' }}>Clinic Hours</h3>
+                <h3 style={{ fontFamily: "'Fraunces',serif", color: 'var(--orange-deep)', marginBottom: '14px' }}>{t('home.contact.hours')}</h3>
                 <table>
                   <tbody>
-                    <tr><td>Monday – Friday</td><td>9:00 am – 1:00 pm · 2:00 pm – 6:00 pm</td></tr>
-                    <tr><td>Saturday</td><td>9:00 am – 1:00 pm</td></tr>
-                    <tr className="closed"><td>Sundays &amp; Public Holidays</td><td>Closed</td></tr>
+                    <tr><td>{t('home.contact.monFri')}</td><td>{t('home.contact.monFriHours')}</td></tr>
+                    <tr><td>{t('home.contact.sat')}</td><td>{t('home.contact.satHours')}</td></tr>
+                    <tr className="closed"><td>{t('home.contact.sunPh')}</td><td>{t('home.contact.closed')}</td></tr>
                   </tbody>
                 </table>
               </div>
