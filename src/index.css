@@ -325,3 +325,11 @@ footer .lic{margin-top:10px;font-size:.78rem}
   .topbar .lic{display:none}
   .page-hero{padding:48px 0 56px}
 }
+
+/* ---- Map card (contact page) ---- */
+.map-link{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);transition:box-shadow .25s}
+.map-link:hover{box-shadow:var(--shadow)}
+.map-placeholder{height:220px;background:linear-gradient(135deg,var(--orange-soft) 0%,#F0E0C8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--orange-deep);font-size:.95rem}
+.map-placeholder .pin{font-size:2.4rem}
+.map-address{padding:16px 20px;font-size:.9rem;color:var(--ink-soft)}
+.map-address strong{color:var(--ink);display:block;margin-bottom:4px}
