@@ -317,10 +317,10 @@ footer .lic{margin-top:10px;font-size:.78rem}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
-  .hero{flex-direction:column;min-height:0;align-items:stretch}
-  .hero-bg{position:static;width:100%;height:300px;object-fit:cover;object-position:center center;order:2;flex-shrink:0}
-  .hero-overlay{display:none}
-  .hero .wrap{position:static;z-index:auto;order:1;grid-template-columns:1fr;padding:52px 0;background:var(--ink)}
+  .hero{min-height:700px;align-items:flex-end}
+  .hero-bg{object-position:left top}
+  .hero-overlay{background:linear-gradient(0deg,rgba(10,20,30,.96) 0%,rgba(10,20,30,.86) 38%,rgba(10,20,30,.24) 62%,rgba(10,20,30,.04) 100%)}
+  .hero .wrap{grid-template-columns:1fr;padding-top:0;padding-bottom:44px;width:100%}
   .seal{display:none}
   .svc-grid{grid-template-columns:1fr 1fr}
   .doc-grid{grid-template-columns:1fr 1fr}
