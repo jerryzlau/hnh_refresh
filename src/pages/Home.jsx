@@ -220,12 +220,17 @@ function IntroAnimation({ onDone }) {
    Home Page
    ============================================================ */
 export default function Home() {
-  const [introVisible, setIntroVisible] = useState(true);
+  const [introVisible, setIntroVisible] = useState(() => !localStorage.getItem('hnhmgl-intro-seen'));
   useReveal();
+
+  function handleIntroDone() {
+    localStorage.setItem('hnhmgl-intro-seen', '1');
+    setIntroVisible(false);
+  }
 
   return (
     <>
-      {introVisible && <IntroAnimation onDone={() => setIntroVisible(false)} />}
+      {introVisible && <IntroAnimation onDone={handleIntroDone} />}
 
       <main id="top">
 
